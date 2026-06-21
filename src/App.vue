@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <HelloWorld />
+  <main class="min-h-screen bg-site-bg text-site-text">
+    <!-- TODO: Build Header Navigation -->
+    <!-- TODO: Build Hero Section -->
+  </main>
 </template>
