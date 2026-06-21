@@ -1,6 +1,6 @@
 <template>
     <header class="sticky top-0 z-50 border-b border-site-border/60 bg-site-bg/80 backdrop-blur-xl">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <nav  aria-label="Primary navigation" class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <a href="#" class="flex items-center gap-3 font-semibold">
             <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-brand text-white">
               A
@@ -8,13 +8,7 @@
             <span>Ashlee Seagle</span>
           </a>
 
-          <div class="hidden items-center gap-8 text-sm text-site-muted md:flex">
-            <a href="#projects" class="hover:text-site-text">Projects</a>
-            <a href="#skills" class="hover:text-site-text">Skills</a>
-            <a href="#experience" class="hover:text-site-text">Experience</a>
-            <a href="#about" class="hover:text-site-text">About</a>
-            <a href="#contact" class="hover:text-site-text">Contact</a>
-          </div>
+          <NavigationMenu />
 
           <a
             href="#contact"
@@ -30,3 +24,7 @@
       </header>
 
 </template>
+
+<script setup lang="ts">
+    import NavigationMenu from './NavigationMenu.vue';
+</script>
