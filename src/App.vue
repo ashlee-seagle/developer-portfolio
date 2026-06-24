@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import MainLayout from './layouts/MainLayout.vue';
 import AboutSection from './sections/AboutSection.vue';
-import HeroSection from './sections/HeroSection.vue'
-import ProjectSection from './sections/ProjectSection.vue'
+import HeroSection from './sections/HeroSection.vue';
+import ProjectSection from './sections/ProjectSection.vue';
+import SkillsSection from './sections/SkillsSection.vue';
 </script>
 
 <template>
@@ -10,5 +11,6 @@ import ProjectSection from './sections/ProjectSection.vue'
       <HeroSection />
       <ProjectSection />
       <AboutSection />
+      <SkillsSection />
   </MainLayout>
 </template>
