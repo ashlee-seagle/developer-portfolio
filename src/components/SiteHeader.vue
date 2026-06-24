@@ -17,14 +17,50 @@
             Let’s Connect
           </a>
 
-          <button class="rounded-lg border border-site-border px-3 py-2 text-sm md:hidden">
-            Menu
-          </button>
+          <button
+                type="button"
+                class="flex h-10 w-10 items-center justify-center rounded-lg border border-site-border md:hidden"
+                aria-label="Toggle navigation menu"
+                aria-controls="mobile-navigation"
+                :aria-expanded="isMobileMenuOpen"
+                @click="toggleMobileMenu"
+            >
+            {{ isMobileMenuOpen ? '✕' : '☰' }}
+        </button>
         </nav>
+        <div
+            v-if="isMobileMenuOpen"
+            id="mobile-navigation"
+            class="border-t border-site-border bg-site-bg px-4 py-4 md:hidden"
+        >
+            <div class="flex flex-col gap-3 text-sm text-site-muted">
+                <a
+                    v-for="item in navItems"
+                    :key="item.href"
+                    :href="item.href"
+                    class="hover:text-site-text"
+                    @click="closeMobileMenu"
+                    >
+                    {{ item.label }}
+                </a>
+            </div>
+        </div>
       </header>
 
 </template>
 
 <script setup lang="ts">
+    import { navItems } from '../data/navigation'
     import NavigationMenu from './NavigationMenu.vue';
+    import { ref } from 'vue';
+
+    const isMobileMenuOpen = ref(false)
+
+    const toggleMobileMenu = () => {
+    isMobileMenuOpen.value = !isMobileMenuOpen.value
+    }
+
+    const closeMobileMenu = () => {
+    isMobileMenuOpen.value = false
+    }
 </script>
