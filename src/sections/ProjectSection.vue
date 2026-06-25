@@ -39,11 +39,11 @@
   import ProjectCard from '../components/projects/ProjectCard.vue';
   const projects: Project[] = [
   {
-    title: 'SwiftEvents',
+    title: 'Self-service Event Management PLatform',
     type: 'professional',
-    description: 'Enterprise event management platform...',
+    description: 'Multi-tenant event management platform...',
     technologies: ['Laravel', 'Vue', 'Quasar'],
-    caseStudyUrl: '#',
+    caseStudyRoute: '/projects/self-service-event-management-platform',
   },
   {
     title: 'Workout Planner',

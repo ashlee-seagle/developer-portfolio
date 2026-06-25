@@ -36,9 +36,13 @@
     </div>
 
     <div class="mt-6 flex flex-wrap gap-4 text-sm font-medium">
-      <a v-if="project.caseStudyUrl" :href="project.caseStudyUrl" class="text-brand hover:text-brand-hover">
-        View Case Study →
-      </a>
+      <RouterLink
+    v-if="project.caseStudyRoute"
+    :to="project.caseStudyRoute"
+    class="text-brand hover:text-brand-hover"
+  >
+    View Case Study →
+  </RouterLink>
 
       <a v-if="project.githubUrl" :href="project.githubUrl" class="text-site-text hover:text-brand">
         GitHub →
@@ -52,6 +56,7 @@
 </template>
 
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
 import TechBadge from './TechBadge.vue'
 import type { Project } from '../../types/project'
 
