@@ -43,7 +43,7 @@
     type: 'professional',
     description: 'Multi-tenant event management platform...',
     technologies: ['Laravel', 'Vue', 'Quasar'],
-    caseStudyUrl: '#',
+    caseStudyRoute: '/projects/self-service-event-management-platform',
   },
   {
     title: 'Workout Planner',

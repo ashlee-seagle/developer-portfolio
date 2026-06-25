@@ -34,15 +34,16 @@
             class="border-t border-site-border bg-site-bg px-4 py-4 md:hidden"
         >
             <div class="flex flex-col gap-3 text-sm text-site-muted">
-                <a
-                    v-for="item in navItems"
-                    :key="item.href"
-                    :href="item.href"
-                    class="hover:text-site-text"
-                    @click="closeMobileMenu"
-                    >
-                    {{ item.label }}
-                </a>
+                
+                <RouterLink
+                v-for="item in navItems"
+                :key="item.label"
+                :to="item.to"
+                class="hover:text-site-text transition"
+                @click="closeMobileMenu"
+                >
+                {{ item.label }}
+                </RouterLink>
             </div>
         </div>
       </header>

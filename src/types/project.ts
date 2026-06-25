@@ -9,7 +9,7 @@ export interface Project {
   description: string;
   technologies: string[];
   image?: string;
-  caseStudyUrl?: string;
+  caseStudyRoute?: string;
   githubUrl?: string;
   liveDemoUrl?: string;
   role?: string;
