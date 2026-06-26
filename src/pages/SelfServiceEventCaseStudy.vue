@@ -1,33 +1,53 @@
 <template>
-  <article class="space-y-20">
+    <div class="mb-8">
+    <RouterLink
+      :to="{ path: '/', hash: '#projects' }"
+      class="inline-flex items-center gap-2 text-sm font-medium text-site-muted transition hover:text-brand"
+    >
+      ← Back to Projects
+    </RouterLink>
+  </div>
+    
+  <article class="space-y-20 py-4">
     <section class="border-b border-site-border/60 pb-16">
+
+  <div class="mt-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+    <div>
       <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">
         Professional Case Study
       </p>
 
-      <h1 class="mt-4 max-w-4xl text-5xl font-bold tracking-tight text-site-text">
+      <h1 class="mt-4 text-5xl font-bold tracking-tight text-site-text">
         Self-Service Event Management Platform
       </h1>
 
-      <p class="mt-6 max-w-3xl text-lg leading-8 text-site-muted">
+      <p class="mt-6 text-lg leading-8 text-site-muted">
         A self-service event management platform designed to streamline event creation,
         registration, attendee management, and communications for professional education programs.
       </p>
 
       <div class="mt-8 flex flex-wrap gap-2">
-        <span v-for="tech in technologies" :key="tech" class="rounded-md bg-white/5 px-3 py-1.5 text-sm text-site-muted ring-1 ring-site-border">
+        <span
+          v-for="tech in technologies"
+          :key="tech"
+          class="rounded-md bg-white/5 px-3 py-1.5 text-sm text-site-muted ring-1 ring-site-border"
+        >
           {{ tech }}
         </span>
       </div>
+    </div>
 
-      <div class="mt-10 grid gap-4 sm:grid-cols-3">
-        <InfoCard label="Role" value="Lead Full-Stack Developer" />
-        <InfoCard label="Status" value="Pre-release" />
-        <InfoCard label="Type" value="Professional Project" />
-      </div>
+    <div class="rounded-card border border-site-border bg-site-surface/70 p-5 shadow-card">
+      <ScreenshotPlaceholder label="Event overview screenshot coming soon" />
+    </div>
+  </div>
 
-      <ScreenshotPlaceholder class="mt-10" label="Hero screenshot placeholder" />
-    </section>
+  <div class="mt-10 grid gap-4 sm:grid-cols-3">
+    <InfoCard label="Role" value="Lead Full-Stack Developer" />
+    <InfoCard label="Status" value="Pre-release" />
+    <InfoCard label="Type" value="Professional Project" />
+  </div>
+</section>
 
     <CaseStudySection title="Project Overview">
       <p>
@@ -72,22 +92,51 @@
       </div>
     </CaseStudySection>
 
-    <CaseStudySection title="The Challenge">
-      <p>
+    
+    <section class="grid gap-6 lg:grid-cols-2">
+  <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
+    <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">
+      Challenge
+    </p>
+
+    <h2 class="mt-3 text-2xl font-bold text-site-text">
+      Developer-dependent event setup created a bottleneck.
+    </h2>
+
+    <p class="mt-4 leading-8 text-site-muted">
+      The previous process required developers to create new event sites,
+      copy and modify legacy code, update content, send repeated test emails,
+      and manually trigger invitations.
+    </p>
+     <!-- <p>
         The previous process created a bottleneck for both developers and event coordinators.
         Developers were spending time on repetitive event setup and content maintenance,
         while administrators remained dependent on engineering resources for routine updates.
-      </p>
-    </CaseStudySection>
+      </p> -->
+  </div>
 
-    <CaseStudySection title="The Solution">
-      <p>
+  <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
+    <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">
+      Solution
+    </p>
+
+    <h2 class="mt-3 text-2xl font-bold text-site-text">
+      A self-service platform for administrators.
+    </h2>
+
+    <p class="mt-4 leading-8 text-site-muted">
+      The platform centralizes event setup, registration, attendee management,
+      email communications, recurring events, and reporting into one guided
+      administrative experience.
+    </p>
+    <!-- <p>
         The platform centralizes event setup, registration, attendee management, recurring
         events, email communications, and reporting into a guided administrative interface.
         Instead of submitting repeated requests to developers, event staff can configure and
         manage event workflows directly.
-      </p>
-    </CaseStudySection>
+      </p> -->
+  </div>
+</section>
 
     <CaseStudySection title="Feature Highlights">
       <div class="grid gap-8">
