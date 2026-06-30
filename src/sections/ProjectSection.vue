@@ -46,6 +46,14 @@
     caseStudyRoute: '/projects/self-service-event-management-platform',
   },
   {
+  title: 'Reusable Frontend Platform',
+  type: 'professional',
+  description:
+    'An internal frontend platform with reusable layouts, components, and templates that standardized new applications and saved 50+ engineering hours.',
+  technologies: ['Laravel', 'Vue 3', 'Quasar', 'Vue Router'],
+  caseStudyRoute: '/projects/reusable-frontend-platform',
+  },
+  {
     title: 'Workout Planner',
     type: 'personal',
     description: 'Workout generation application...',
