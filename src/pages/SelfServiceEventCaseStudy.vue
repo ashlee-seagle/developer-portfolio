@@ -8,135 +8,157 @@
     </RouterLink>
   </div>
     
-  <article class="space-y-20 py-4">
-    <section class="border-b border-site-border/60 pb-16">
+<article class="space-y-20 py-4">
+  <section class="border-b border-site-border/60 pb-16">
+    <div class="mt-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">
+          Professional Case Study
+        </p>
 
-  <div class="mt-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-    <div>
-      <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">
-        Professional Case Study
-      </p>
+        <h1 class="mt-4 text-5xl font-bold tracking-tight text-site-text">
+          Self-Service Event Management Platform
+        </h1>
 
-      <h1 class="mt-4 text-5xl font-bold tracking-tight text-site-text">
-        Self-Service Event Management Platform
-      </h1>
+        <p class="mt-6 text-lg leading-8 text-site-muted">
+          A self-service event management platform that centralizes event creation,
+          registration, attendee management, recurring scheduling, reporting, and
+          communications through a single administrative experience.
+        </p>
 
-      <p class="mt-6 text-lg leading-8 text-site-muted">
-        A self-service event management platform designed to streamline event creation,
-        registration, attendee management, and communications for professional education programs.
-      </p>
+        <div class="mt-8 flex flex-wrap gap-2">
+          <span
+            v-for="tech in technologies"
+            :key="tech"
+            class="rounded-md bg-white/5 px-3 py-1.5 text-sm text-site-muted ring-1 ring-site-border"
+          >
+            {{ tech }}
+          </span>
+        </div>
+      </div>
 
-      <div class="mt-8 flex flex-wrap gap-2">
-        <span
-          v-for="tech in technologies"
-          :key="tech"
-          class="rounded-md bg-white/5 px-3 py-1.5 text-sm text-site-muted ring-1 ring-site-border"
-        >
-          {{ tech }}
-        </span>
+      <div class="rounded-card border border-site-border bg-site-surface/70 p-5 shadow-card">
+        <img
+          :src="eventOverviewImage"
+          alt="Administrative workspace showing event details, upcoming events, setup progress, and management actions"
+          class="w-full rounded-lg border border-site-border"
+        />
+
+        <p class="mt-4 text-sm leading-6 text-site-muted">
+          A centralized administrative workspace provides quick access to event
+          management, attendee workflows, communications, and reporting from a
+          single application.
+        </p>
       </div>
     </div>
 
-    <div class="rounded-card border border-site-border bg-site-surface/70 p-5 shadow-card">
-      <ScreenshotPlaceholder label="Event overview screenshot coming soon" />
+    <div class="mt-10 grid gap-4 sm:grid-cols-3">
+      <InfoCard label="Role" value="Sole Developer" />
+      <InfoCard label="Status" value="Pre-release" />
+      <InfoCard label="Type" value="Professional Project" />
     </div>
-  </div>
+  </section>
 
-  <div class="mt-10 grid gap-4 sm:grid-cols-3">
-    <InfoCard label="Role" value="Lead Full-Stack Developer" />
-    <InfoCard label="Status" value="Pre-release" />
-    <InfoCard label="Type" value="Professional Project" />
-  </div>
-</section>
-
-    <CaseStudySection title="Project Overview">
-      <p>
-        The platform was created to replace a developer-driven process for creating and
-        managing educational events. Previously, launching a new event required the
-        development team to create new sites, copy and modify legacy code, update
-        content, send repeated test emails, and manually trigger invitation emails.
-      </p>
-
-      <p>
-        I proposed a self-service platform that would allow administrators to manage
-        the event lifecycle independently, reducing repetitive developer maintenance
-        and giving event coordinators more ownership over their workflows.
-      </p>
-    </CaseStudySection>
-
-    <CaseStudySection title="My Role">
-      <div class="grid gap-4 md:grid-cols-2">
-        <BulletCard title="Requirements & Discovery" :items="[
-          'Identified repetitive developer-driven workflows',
-          'Gathered requirements from stakeholders',
-          'Iterated based on stakeholder and management feedback',
-        ]" />
-
-        <BulletCard title="System Design" :items="[
-          'Designed the relational database schema',
-          'Planned application architecture',
-          'Structured reusable APIs and frontend workflows',
-        ]" />
-
-        <BulletCard title="Full-Stack Development" :items="[
-          'Built Laravel REST APIs',
-          'Built Vue 3 + Quasar frontend workflows',
-          'Implemented event, attendee, email, and reporting features',
-        ]" />
-
-        <BulletCard title="Testing & Release Prep" :items="[
-          'Performed end-to-end workflow testing',
-          'Refined features through feedback',
-          'Prepared the platform for release',
-        ]" />
-      </div>
-    </CaseStudySection>
-
-    
-    <section class="grid gap-6 lg:grid-cols-2">
-  <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-    <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">
-      Challenge
+  <CaseStudySection title="Project Overview">
+    <p>
+      The platform was created to replace a developer-driven process for creating
+      and managing educational events. Previously, launching a new event required
+      the development team to create new sites, copy and modify legacy code,
+      update content, send repeated test emails, and manually trigger invitation
+      emails.
     </p>
 
-    <h2 class="mt-3 text-2xl font-bold text-site-text">
-      Developer-dependent event setup created a bottleneck.
-    </h2>
-
-    <p class="mt-4 leading-8 text-site-muted">
-      The previous process required developers to create new event sites,
-      copy and modify legacy code, update content, send repeated test emails,
-      and manually trigger invitations.
+    <p>
+      I proposed a self-service platform that would allow administrators to manage
+      the event lifecycle independently, reducing repetitive developer maintenance
+      and giving event coordinators more ownership over their workflows.
     </p>
-     <!-- <p>
-        The previous process created a bottleneck for both developers and event coordinators.
-        Developers were spending time on repetitive event setup and content maintenance,
-        while administrators remained dependent on engineering resources for routine updates.
-      </p> -->
-  </div>
+    <p>
+  To accelerate development and improve consistency across projects, the
+  application was built on a reusable frontend platform that I designed for
+  Vue and Laravel applications. Shared layouts, navigation, theming, and UI
+  patterns reduced setup time while providing a consistent user experience
+  across future applications.
+</p>
 
-  <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-    <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">
-      Solution
+<RouterLink
+  to="/projects/reusable-frontend-platform"
+  class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-brand transition hover:opacity-80"
+>
+  Learn more about the Reusable Frontend Platform →
+</RouterLink>
+  </CaseStudySection>
+
+  <CaseStudySection title="My Role">
+    <p>
+      As the sole developer on the project, I led the platform from initial concept through release preparation, collaborating with stakeholders to define business requirements, design workflows, architect the solution, and deliver the application end to end.
     </p>
 
-    <h2 class="mt-3 text-2xl font-bold text-site-text">
-      A self-service platform for administrators.
-    </h2>
+    <div class="grid gap-4 md:grid-cols-2">
+      <BulletCard title="Product Strategy & Discovery" :items="[
+        'Identified repetitive developer-driven workflows',
+        'Gathered requirements from stakeholders',
+        'Prioritized features based on business value',
+        'Iterated through stakeholder and management feedback',
+      ]" />
 
-    <!-- <p class="mt-4 leading-8 text-site-muted">
-      The platform centralizes event setup, registration, attendee management,
-      email communications, recurring events, and reporting into one guided
-      administrative experience.
-    </p> -->
-    <p class="mt-4 leading-8 text-site-muted">
-        The platform centralizes event setup, registration, attendee management, recurring
-        events, email communications, and reporting into a guided administrative interface.
-        Instead of submitting repeated requests to developers, event staff can configure and
-        manage event workflows directly.
+      <BulletCard title="Solution Architecture" :items="[
+        'Designed the relational database schema',
+        'Planned application architecture',
+        'Structured reusable APIs and frontend workflows',
+        'Established technical direction for the platform',
+      ]" />
+
+      <BulletCard title="Full-Stack Development" :items="[
+        'Built Laravel REST APIs',
+        'Developed Vue 3 + Quasar frontend workflows',
+        'Implemented event, attendee, email, and reporting features',
+        'Integrated reusable frontend platform patterns',
+      ]" />
+
+      <BulletCard title="Quality & Delivery" :items="[
+        'Performed end-to-end workflow testing',
+        'Refined features through feedback',
+        'Prepared the platform for release',
+        'Supported documentation and handoff planning',
+      ]" />
+    </div>
+  </CaseStudySection>
+
+  <section class="grid gap-6 lg:grid-cols-2">
+    <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">
+        Challenge
       </p>
-  </div>
-</section>
+
+      <h2 class="mt-3 text-2xl font-bold text-site-text">
+        Developer-dependent event setup created a bottleneck.
+      </h2>
+
+      <p class="mt-4 leading-8 text-site-muted">
+        The previous process required developers to create new event sites,
+        copy and modify legacy code, update content, send repeated test emails,
+        and manually trigger invitations.
+      </p>
+    </div>
+
+    <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">
+        Solution
+      </p>
+
+      <h2 class="mt-3 text-2xl font-bold text-site-text">
+        A self-service platform for administrators.
+      </h2>
+
+      <p class="mt-4 leading-8 text-site-muted">
+        The platform centralizes event setup, registration, attendee management,
+        recurring events, email communications, and reporting into a guided
+        administrative interface. Instead of submitting repeated requests to
+        developers, event staff can configure and manage event workflows directly.
+      </p>
+    </div>
+  </section>
 
     <section class="space-y-8 border-b border-site-border/60 pb-16">
   <div class="max-w-3xl">
@@ -145,52 +167,82 @@
     </h2>
 
     <p class="mt-4 text-lg leading-8 text-site-muted">
-      The platform brings together the entire event lifecycle into a single administrative experience.
-      These are some of the key workflows designed to reduce manual effort and empower non-technical users.
-    </p>
+  Designed as a shared platform used by multiple administrative groups, the
+  application centralizes the entire event lifecycle—from creation and
+  registration to attendee management and communications—into one consistent
+  administrative experience. These are some of the key workflows that reduce
+  manual effort while empowering non-technical users.
+</p>
   </div>
+
 
   <div class="grid gap-8">
     <FeatureBlock
-      title="Event Overview"
-      description="A centralized workspace that brings event details, recurring schedules, setup progress, and common management tasks together in one place, giving administrators everything they need to manage an event efficiently."
-      :image-src="eventOverviewImage"
-      image-alt="Event overview screen showing event details, recurring occurrences, setup checklist, and management actions"
-      image-caption="Centralized event workspace with event details, recurring occurrences, setup checklist, and quick management actions."
+  title="Event Workspace & Setup Checklist"
+  description="A centralized workspace brings event details, recurring schedules, setup progress, and common management actions together in one place, helping administrators quickly understand what still needs attention before an event is ready."
+  :image-src="eventOverviewExpandedImage"
+  image-alt="Event workspace showing event details, recurring occurrences, setup checklist, and management actions"
+  image-caption="The setup checklist highlights required and recommended tasks so administrators can quickly see what remains before an event is ready to launch."
+/>
 
-      />
-    <FeatureBlock
-        title="Event Creation & Configuration"
-        description="Administrators create events through a guided multi-step workflow that supports both one-time and recurring events. The platform simplifies complex scheduling, automatically generates recurring occurrences, and provides configurable registration settings before an event is published."
-        :image-src="eventCreationReviewImage"
-        image-alt="Event creation wizard showing generated recurring event instances for review"
-        image-caption="Generated recurring event instances can be reviewed and adjusted before the event is published."
-    />
-    <div class="mt-8 grid gap-6 md:grid-cols-2">
+  <FeatureBlock
+  title="Event Library"
+  description="Administrators can browse, search, filter, and manage upcoming and recurring events from a centralized library. Status indicators and quick actions make it easy to locate events and continue work throughout the event lifecycle."
+  :image-src="eventsListImage"
+  image-alt="Event library showing upcoming and recurring events with search, filters, status indicators, and management actions."
+  image-caption="A centralized event library helps administrators organize and manage events throughout their lifecycle."
+/>
+    <div class="rounded-card border border-site-border bg-site-surface p-8">
+        <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
+    <ScreenshotGallery :images="newEventWizardImages" />
 
-  <MiniFeatureBlock
-    title="Flexible Recurrence Rules"
-    description="For recurring events, administrators can configure custom recurrence patterns, including frequency, interval, end conditions, and schedule rules without requiring manual creation of each occurrence."
-    :image-src="recurrenceBuilderImage"
-    image-alt="Recurring event pattern builder"
-    image-caption="Configure custom recurrence rules for one-time and repeating events."
-  />
+    <div>
+      <h3 class="text-xl font-semibold text-site-text">
+        Event Creation & Configuration
+      </h3>
 
-  <MiniFeatureBlock
-    title="Registration Configuration"
-    description="Registration options such as attendee eligibility, capacity limits, credit requirements, and registration windows are configured before the event is finalized, giving administrators complete control over the attendee experience."
-    :image-src="registrationSettingsImage"
-    image-alt="Registration configuration step"
-    image-caption="Registration settings are configured before an event is published."
-  />
+      <p class="mt-3 text-sm leading-6 text-site-muted">
+        Administrators create events through a guided multi-step workflow that supports both
+        one-time and recurring events. The platform simplifies complex scheduling,
+        automatically generates recurring occurrences, and provides configurable registration
+        settings before an event is published.
+      </p>
+    </div>
+    </div>
+</div>
+    
 
+<div class="rounded-card border border-site-border bg-site-surface p-8">
+  <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
+    <ScreenshotGallery :images="attendeeImportImages" />
+
+    <div>
+      <h3 class="text-xl font-semibold text-site-text">
+        Attendee Import Wizard
+      </h3>
+
+      <p class="mt-3 text-sm leading-6 text-site-muted">
+        Administrators can upload attendee spreadsheets, map columns to application fields, configure registration behavior, and review imported records before completing the import. The guided workflow reduces manual data entry while giving users confidence before data is committed.
+      </p>
+    </div>
+  </div>
 </div>
 
 
-
-    <FeatureBlock title="Attendee Management" description="Tools for importing attendees, tracking invitations, managing registrations, and monitoring participation." />
-    <FeatureBlock title="Email Management" description="Template-based communication tools for invitations, confirmations, reminders, and previews." />
-    <FeatureBlock title="Recurring Events" description="Configurable recurrence workflows that support repeated event scheduling and occurrence management." />
+    <FeatureBlock
+  title="Attendee Management"
+  description="A centralized workspace for managing attendees throughout the event lifecycle, including invitation tracking, registration management, search and filtering, Excel import, reporting, and setup progress."
+  :image-src="attendeeManagement"
+  image-alt="Attendee management workspace showing attendee records, registration status, search and filtering tools, import options, and reporting."
+  image-caption="Administrators can manage registrations, invitations, attendee records, and reporting from one centralized workspace."
+/>
+    <FeatureBlock
+  title="Email Management"
+  description="Create, customize, preview, and manage reusable email templates for invitations, confirmations, reminders, and other event communications while maintaining consistent messaging throughout the event lifecycle."
+  :image-src="emailManagement"
+  image-alt="Email management workspace showing reusable email templates, scheduling options, and communication tools."
+  image-caption="Reusable email templates simplify communication while ensuring consistent messaging across every event."
+/>
     <FeatureBlock
       title="Group Dashboard"
       description="Centralized visibility into event setup, registration metrics, invitations, email activity, and event status."
@@ -201,33 +253,50 @@
 </section>
 
     <CaseStudySection title="Technical Challenges">
-      <div class="grid gap-4 md:grid-cols-2">
-        <BulletCard title="Flexible Data Modeling" :items="[
-          'Supported multiple event types and relationships',
-          'Designed schema for configurable registration workflows',
-          'Balanced flexibility with maintainability',
-        ]" />
+  <div class="grid gap-4 md:grid-cols-3">
 
-        <BulletCard title="Workflow Complexity" :items="[
-          'Converted manual event processes into guided user flows',
-          'Handled draft, registration, attendee, and email states',
-          'Designed workflows for non-technical administrators',
-        ]" />
-      </div>
-    </CaseStudySection>
+    <BulletCard
+      title="Flexible Data Modeling"
+      :items="[
+        'Supported multiple event types and relationships',
+        'Designed schema for configurable registration workflows',
+        'Balanced flexibility with maintainability',
+      ]"
+    />
+
+    <BulletCard
+      title="Workflow Design"
+      :items="[
+        'Converted manual processes into guided user workflows',
+        'Managed draft, registration, attendee, and email states',
+        'Designed intuitive experiences for non-technical users',
+      ]"
+    />
+
+    <BulletCard
+      title="Reusable Platform"
+      :items="[
+        'Built on a shared Vue/Laravel frontend platform',
+        'Created reusable UI patterns and layouts',
+        'Reduced setup time for future applications',
+      ]"
+    />
+
+  </div>
+</CaseStudySection>
 
     <CaseStudySection title="Project Impact">
   <div class="grid gap-6 sm:grid-cols-2">
 
     <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
       <h3 class="text-lg font-semibold text-site-text">
-        Reduced Developer Maintenance
-      </h3>
+  Reduced Developer Maintenance
+</h3>
 
-      <p class="mt-3 text-site-muted">
-        Routine event creation and configuration moved from engineering to
-        administrative users, reducing repetitive developer involvement.
-      </p>
+<p class="mt-3 text-site-muted">
+  Routine event creation and management shifted from engineering to
+  administrative users, reducing repetitive developer involvement.
+</p>
     </div>
 
     <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
@@ -278,18 +347,87 @@
 import InfoCard from '../components/case-study/InfoCard.vue'
 import CaseStudySection from '../components/case-study/CaseStudySection.vue'
 import BulletCard from '../components/case-study/BulletCard.vue'
-import ScreenshotPlaceholder from '../components/case-study/ScreenshotPlaceholder.vue'
 import FeatureBlock from '../components/case-study/FeatureBlock.vue'
-import MiniFeatureBlock from '../components/case-study/MiniFeatureBlock.vue'
+import ScreenshotGallery from '../components/case-study/ScreenshotGallery.vue'
 
-import dashboardImage from '../assets/images/projects/event-platform/dashboard.png'
 import eventOverviewImage from '../assets/images/projects/event-platform/event-overview.png'
+import eventOverviewExpandedImage from '../assets/images/projects/event-platform/event-overview-checklist.png'
+import eventsListImage from '../assets/images/projects/event-platform/events-list.png'
+import attendeeManagement from '../assets/images/projects/event-platform/manage-attendees.png'
+import emailManagement from '../assets/images/projects/event-platform/manage-emails.png'
+import dashboardImage from '../assets/images/projects/event-platform/dashboard.png'
+
+import newEventStep1Image from '../assets/images/projects/event-platform/event-wizard-step1.png'
 import eventCreationReviewImage from '../assets/images/projects/event-platform/event-wizard-step2.png'
 import recurrenceBuilderImage from '../assets/images/projects/event-platform/event-wizard-recurrence-builder.png'
 import registrationSettingsImage from '../assets/images/projects/event-platform/event-wizard-step3.png'
 
+import attendeeImportUploadImage from '../assets/images/projects/event-platform/import-upload.png'
+import attendeeImportMappingImage from '../assets/images/projects/event-platform/import-mapping.png'
+import attendeeImportRegistrationImage from '../assets/images/projects/event-platform/import-registration.png'
+import attendeeImportReviewImage from '../assets/images/projects/event-platform/import-review.png'
+
 
 const technologies = ['Laravel', 'Vue 3', 'Quasar', 'SQL Server', 'REST APIs']
 
+const newEventWizardImages = [
+  {
+    src: newEventStep1Image,
+    alt: 'Event creation wizard showing event details and configuration fields.',
+    label: 'Event Details',
+    description: 'Administrators begin by entering core event details and choosing whether the event is one-time or recurring.',
+
+  },
+  {
+    src: recurrenceBuilderImage,
+    alt: 'Recurring event pattern builder with frequency and end condition options.',
+    label: 'Recurrence',
+    description: 'Recurring events can be configured with custom frequency, interval, and end conditions.',
+
+  },
+  {
+    src: eventCreationReviewImage,
+    alt: 'Event creation wizard showing generated recurring event instances for review.',
+    label: 'Review Dates',
+    description: 'Generated recurring event instances can be reviewed and adjusted before the event is published.',
+
+  },
+  {
+    src: registrationSettingsImage,
+    alt: 'Event creation wizard showing registration configuration settings.',
+    label: 'Registration',
+    description: 'Registration rules, capacity, and attendee settings are configured before finalizing the event.',
+
+  },
+  
+]
+
+const attendeeImportImages = [
+  {
+    src: attendeeImportUploadImage,
+    alt: 'Attendee import workflow showing file upload step.',
+    label: 'Upload File',
+    description: 'Administrators begin by uploading a CSV or Excel file containing attendee information.',
+  },
+  {
+    src: attendeeImportMappingImage,
+    alt: 'Attendee import workflow showing spreadsheet column mapping.',
+    label: 'Map Columns',
+    description: 'Spreadsheet columns are mapped to application fields before attendee records are imported.',
+  },
+  {
+    src: attendeeImportRegistrationImage,
+    alt: 'Attendee import workflow showing registration configuration options.',
+    label: 'Registration',
+    description: 'Registration options can be applied during import to control attendee access and registration status.',
+  },
+  {
+    src: attendeeImportReviewImage,
+    alt: 'Attendee import workflow showing imported attendee records for review.',
+    label: 'Review',
+    description: 'Imported attendee records can be reviewed before completing the workflow.',
+  },
+]
+ 
 
 </script>
