@@ -67,6 +67,20 @@
       </p>
     </CaseStudySection>
 
+    <div class="rounded-card border border-brand/30 bg-brand/5 p-6">
+  <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">
+    Proven in Production
+  </p>
+
+  <p class="mt-3 leading-8 text-site-muted">
+    Rather than being a standalone proof of concept, this reusable platform was
+    developed alongside the Self-Service Event Management Platform and became the
+    foundation for that application. Components, layouts, and architectural
+    patterns created for the platform were immediately reused in production,
+    validating the approach while accelerating future development.
+  </p>
+</div>
+
     <CaseStudySection title="My Role">
       <div class="grid gap-4 md:grid-cols-2">
         <BulletCard title="Problem Identification" :items="[
