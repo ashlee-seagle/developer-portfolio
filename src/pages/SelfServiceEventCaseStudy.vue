@@ -160,7 +160,7 @@
 
       />
     <div class="rounded-card border border-site-border bg-site-surface p-8">
-  <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
+        <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
     <ScreenshotGallery :images="newEventWizardImages" />
 
     <div>
@@ -175,9 +175,25 @@
         settings before an event is published.
       </p>
     </div>
-  </div>
+    </div>
 </div>
     
+
+<div class="rounded-card border border-site-border bg-site-surface p-8">
+  <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
+    <ScreenshotGallery :images="attendeeImportImages" />
+
+    <div>
+      <h3 class="text-xl font-semibold text-site-text">
+        Attendee Import Wizard
+      </h3>
+
+      <p class="mt-3 text-sm leading-6 text-site-muted">
+        Administrators can upload attendee spreadsheets, map columns to application fields, configure registration behavior, and review imported records before completing the import. The guided workflow reduces manual data entry while giving users confidence before data is committed.
+      </p>
+    </div>
+  </div>
+</div>
 
 
     <FeatureBlock title="Attendee Management" description="Tools for importing attendees, tracking invitations, managing registrations, and monitoring participation." />
@@ -276,10 +292,16 @@ import ScreenshotGallery from '../components/case-study/ScreenshotGallery.vue'
 
 import dashboardImage from '../assets/images/projects/event-platform/dashboard.png'
 import eventOverviewImage from '../assets/images/projects/event-platform/event-overview.png'
+
 import newEventStep1Image from '../assets/images/projects/event-platform/event-wizard-step1.png'
 import eventCreationReviewImage from '../assets/images/projects/event-platform/event-wizard-step2.png'
 import recurrenceBuilderImage from '../assets/images/projects/event-platform/event-wizard-recurrence-builder.png'
 import registrationSettingsImage from '../assets/images/projects/event-platform/event-wizard-step3.png'
+
+import attendeeImportUploadImage from '../assets/images/projects/event-platform/import-upload.png'
+import attendeeImportMappingImage from '../assets/images/projects/event-platform/import-mapping.png'
+import attendeeImportRegistrationImage from '../assets/images/projects/event-platform/import-registration.png'
+import attendeeImportReviewImage from '../assets/images/projects/event-platform/import-review.png'
 
 
 const technologies = ['Laravel', 'Vue 3', 'Quasar', 'SQL Server', 'REST APIs']
@@ -313,7 +335,35 @@ const newEventWizardImages = [
     description: 'Registration rules, capacity, and attendee settings are configured before finalizing the event.',
 
   },
+  
 ]
 
+const attendeeImportImages = [
+  {
+    src: attendeeImportUploadImage,
+    alt: 'Attendee import workflow showing file upload step.',
+    label: 'Upload File',
+    description: 'Administrators begin by uploading a CSV or Excel file containing attendee information.',
+  },
+  {
+    src: attendeeImportMappingImage,
+    alt: 'Attendee import workflow showing spreadsheet column mapping.',
+    label: 'Map Columns',
+    description: 'Spreadsheet columns are mapped to application fields before attendee records are imported.',
+  },
+  {
+    src: attendeeImportRegistrationImage,
+    alt: 'Attendee import workflow showing registration configuration options.',
+    label: 'Registration',
+    description: 'Registration options can be applied during import to control attendee access and registration status.',
+  },
+  {
+    src: attendeeImportReviewImage,
+    alt: 'Attendee import workflow showing imported attendee records for review.',
+    label: 'Review',
+    description: 'Imported attendee records can be reviewed before completing the workflow.',
+  },
+]
+ 
 
 </script>
