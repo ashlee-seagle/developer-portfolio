@@ -37,8 +37,13 @@
         </div>
 
         <div class="rounded-card border border-site-border bg-site-surface/70 p-5 shadow-card">
-          <ScreenshotPlaceholder label="Frontend platform screenshot coming soon" />
-        </div>
+          <ScreenshotPlaceholder
+            label="Reusable frontend platform starter template"
+            :src="reusableAppShell"
+            alt="Reusable frontend platform starter template with configurable header, sidebar navigation, and responsive application layout."
+          />
+        </div> 
+        
       </div>
 
       <div class="mt-10 grid gap-4 sm:grid-cols-3">
@@ -144,59 +149,52 @@
     </section>
 
     <section class="space-y-8 border-b border-site-border/60 pb-16">
-      <div class="max-w-3xl">
-        <h2 class="text-2xl font-bold tracking-tight text-site-text">
-          Platform Highlights
-        </h2>
+  <div class="max-w-3xl">
+    <h2 class="text-2xl font-bold tracking-tight text-site-text">
+      Platform Highlights
+    </h2>
 
-        <p class="mt-4 text-lg leading-8 text-site-muted">
-          The platform combines reusable application architecture, configurable layouts,
-          and developer documentation to make new applications faster and more consistent.
-        </p>
-      </div>
+    <p class="mt-4 text-lg leading-8 text-site-muted">
+      The platform combines reusable architecture, configurable layouts,
+      standardized components, and shared application patterns to make new
+      development faster and more consistent.
+    </p>
+  </div>
 
-      <div class="grid gap-8">
-        <FeatureBlock
-          title="Hybrid SPA Starter Template"
-          description="A reusable application starter template gives developers a working Laravel, Vue 3, and Quasar foundation with routing, layouts, and application structure already configured."
-          :image-src="reusableAppShell"
-          image-alt="Reusable frontend platform starter template with configurable header, sidebar navigation, and responsive application layout."
-          image-caption="A fully configured application shell provides reusable layouts, navigation, theming, and responsive behavior, allowing developers to focus on building features instead of project setup."
-          />
+  <div class="grid gap-8">
+    <FeatureBlock
+      title="Hybrid SPA Starter Template"
+      description="A reusable starter template provides a working Laravel, Vue 3, and Quasar foundation with routing, layouts, and application structure already configured."
+      :image-src="reusableAppShell"
+      image-alt="Reusable frontend platform starter template with configurable header, sidebar navigation, and responsive application layout."
+      image-caption="Developers begin with a fully configured application shell instead of rebuilding project setup from scratch."
+    />
 
-        <FeatureBlock
-          title="Configurable Application Shell"
-          description="The platform provides configurable layouts with optional side navigation, header navigation, branding, theming, and responsive behavior, allowing each application to adapt to its needs while maintaining a consistent user experience."
-          :image-src="configurableAppShell"
-          image-alt="Application shell with configurable header, sidebar navigation, search, filters, and event management dashboard."
-          image-caption="Applications inherit a shared layout framework with configurable navigation, branding, theming, and responsive behavior, allowing teams to focus on application features instead of rebuilding common infrastructure."
-          />
- 
-        <div class="mt-8 grid gap-6 md:grid-cols-2">
-          <MiniFeatureBlock
-            title="Theme Variants"
-            description="Applications can switch between branded header styles, light mode, and dark mode without rebuilding the layout structure."
-            image-caption="Theme configuration supports multiple branded header and layout options."
-          />
+    <FeatureBlock
+      title="Configurable Application Framework"
+      description="The platform provides a reusable application framework with configurable layouts, navigation, branding, themes, and responsive behavior. Applications share the same underlying architecture while adapting their interface through configuration instead of custom implementation."
+      :image-src="configurableAppShell"
+      image-alt="Configurable application framework showing header navigation, sidebar navigation, dashboard cards, tabs, filters, and data table."
+      image-caption="Applications inherit a shared framework with configurable navigation, branding, themes, layouts, and responsive behavior."
+    />
 
-          <MiniFeatureBlock
-            title="Navigation Configuration"
-            description="Header links, sidebar links, dropdowns, external links, and mobile navigation are all driven by reusable configuration patterns."
-            image-caption="Navigation arrays power desktop, sidebar, and mobile menu experiences."
-          />
-        </div>
+    <FeatureBlock
+      title="Reusable Component Library"
+      description="The platform includes reusable interface patterns for forms, tables, cards, tabs, grid views, list views, filters, status badges, and dashboard widgets."
+      :image-src="componentLibraryImage"
+      image-alt="Application screen showing reusable interface components including form fields, buttons, layout containers, and workflow controls."
+      image-caption="Shared interface components help applications feel consistent while reducing duplicated development work."
+    />
 
-        <FeatureBlock
-          title="Reusable Component Library"
-          description="The UI kit includes reusable patterns for forms, form fields, multi-step forms, tables, grid views, list views, tab panels, and layout wrappers."
-        />
-
-        <FeatureBlock
-          title="Developer Documentation"
-          description="Quickstart and configuration guides help developers copy the starter template, rename references, configure routes, and customize sitewide settings."
-        />
-      </div>
-    </section>
+    <FeatureBlock
+      title="Developer Documentation"
+      description="Quickstart and configuration guides help developers launch a new app, configure routing, customize the application shell, and understand reusable component patterns."
+      :image-src="developerDocsImage"
+      image-alt="Developer documentation showing quickstart and configuration guidance for the reusable frontend platform."
+      image-caption="Documentation supported adoption by making setup and configuration easier for other developers."
+    />
+  </div>
+</section>
 
     <CaseStudySection title="Technical Challenges">
       <div class="grid gap-4 md:grid-cols-2">
@@ -286,10 +284,11 @@ import CaseStudySection from '../components/case-study/CaseStudySection.vue'
 import BulletCard from '../components/case-study/BulletCard.vue'
 import ScreenshotPlaceholder from '../components/case-study/ScreenshotPlaceholder.vue'
 import FeatureBlock from '../components/case-study/FeatureBlock.vue'
-import MiniFeatureBlock from '../components/case-study/MiniFeatureBlock.vue'
 
 import reusableAppShell from '../assets/images/projects/reusable-frontend-platform/uikit-app-shell.png'
 import configurableAppShell from '../assets/images/projects/reusable-frontend-platform/configurable-app-shell.png'
+import componentLibraryImage from '../assets/images/projects/reusable-frontend-platform/form-component.png'
+import developerDocsImage from '../assets/images/projects/reusable-frontend-platform/uikit-guide.png'
 
 const technologies = ['Laravel Blade', 'Vue 3', 'Quasar', 'Vue Router', 'Laravel Mix']
-</script>
+</script> 
