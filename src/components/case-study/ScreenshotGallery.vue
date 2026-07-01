@@ -1,9 +1,9 @@
 <template>
-  <div class="rounded-card border border-site-border bg-site-surface p-6">
+  <div>
     <figure>
       <div
-        class="flex aspect-video items-center justify-center overflow-hidden rounded-card border border-site-border bg-site-surface2"
-      >
+  class="flex aspect-video items-center justify-center overflow-hidden rounded-card border border-site-border bg-site-surface2"
+>
         <img
           :src="activeImage.src"
           :alt="activeImage.alt"
