@@ -177,26 +177,7 @@
     </div>
   </div>
 </div>
-    <div class="mt-8 grid gap-6 md:grid-cols-2">
-
-  <MiniFeatureBlock
-    title="Flexible Recurrence Rules"
-    description="For recurring events, administrators can configure custom recurrence patterns, including frequency, interval, end conditions, and schedule rules without requiring manual creation of each occurrence."
-    :image-src="recurrenceBuilderImage"
-    image-alt="Recurring event pattern builder"
-    image-caption="Configure custom recurrence rules for one-time and repeating events."
-  />
-
-  <MiniFeatureBlock
-    title="Registration Configuration"
-    description="Registration options such as attendee eligibility, capacity limits, credit requirements, and registration windows are configured before the event is finalized, giving administrators complete control over the attendee experience."
-    :image-src="registrationSettingsImage"
-    image-alt="Registration configuration step"
-    image-caption="Registration settings are configured before an event is published."
-  />
-
-</div>
-
+    
 
 
     <FeatureBlock title="Attendee Management" description="Tools for importing attendees, tracking invitations, managing registrations, and monitoring participation." />
@@ -291,7 +272,6 @@ import CaseStudySection from '../components/case-study/CaseStudySection.vue'
 import BulletCard from '../components/case-study/BulletCard.vue'
 import ScreenshotPlaceholder from '../components/case-study/ScreenshotPlaceholder.vue'
 import FeatureBlock from '../components/case-study/FeatureBlock.vue'
-import MiniFeatureBlock from '../components/case-study/MiniFeatureBlock.vue'
 import ScreenshotGallery from '../components/case-study/ScreenshotGallery.vue'
 
 import dashboardImage from '../assets/images/projects/event-platform/dashboard.png'
@@ -309,21 +289,29 @@ const newEventWizardImages = [
     src: newEventStep1Image,
     alt: 'Event creation wizard showing event details and configuration fields.',
     label: 'Event Details',
+    description: 'Administrators begin by entering core event details and choosing whether the event is one-time or recurring.',
+
   },
   {
     src: recurrenceBuilderImage,
     alt: 'Recurring event pattern builder with frequency and end condition options.',
     label: 'Recurrence',
+    description: 'Recurring events can be configured with custom frequency, interval, and end conditions.',
+
   },
   {
     src: eventCreationReviewImage,
     alt: 'Event creation wizard showing generated recurring event instances for review.',
     label: 'Review Dates',
+    description: 'Generated recurring event instances can be reviewed and adjusted before the event is published.',
+
   },
   {
     src: registrationSettingsImage,
     alt: 'Event creation wizard showing registration configuration settings.',
     label: 'Registration',
+    description: 'Registration rules, capacity, and attendee settings are configured before finalizing the event.',
+
   },
 ]
 

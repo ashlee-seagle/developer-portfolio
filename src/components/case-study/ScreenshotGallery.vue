@@ -12,10 +12,16 @@
         />
       </div>
     </figure>
+    <p
+  v-if="activeImage.description"
+      class="mt-5 text-sm leading-6 text-site-muted"
+>
+  {{ activeImage.description }}
+</p>
 
     <div
-      class="mt-4 flex flex-wrap gap-2"
-      aria-label="Screenshot gallery navigation"
+      class="mt-5 flex flex-wrap gap-2"
+  aria-label="Screenshot gallery navigation"
     >
       <button
         v-for="(image, index) in images"
@@ -43,6 +49,7 @@ interface GalleryImage {
   src: string
   alt: string
   label?: string
+  description?: string
 }
 
 const props = defineProps<{
