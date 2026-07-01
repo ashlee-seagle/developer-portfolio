@@ -159,13 +159,24 @@
       image-caption="Centralized event workspace with event details, recurring occurrences, setup checklist, and quick management actions."
 
       />
-    <FeatureBlock
-        title="Event Creation & Configuration"
-        description="Administrators create events through a guided multi-step workflow that supports both one-time and recurring events. The platform simplifies complex scheduling, automatically generates recurring occurrences, and provides configurable registration settings before an event is published."
-        :image-src="eventCreationReviewImage"
-        image-alt="Event creation wizard showing generated recurring event instances for review"
-        image-caption="Generated recurring event instances can be reviewed and adjusted before the event is published."
-    />
+    <div class="rounded-card border border-site-border bg-site-surface p-8">
+  <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
+    <ScreenshotGallery :images="newEventWizardImages" />
+
+    <div>
+      <h3 class="text-xl font-semibold text-site-text">
+        Event Creation & Configuration
+      </h3>
+
+      <p class="mt-3 text-sm leading-6 text-site-muted">
+        Administrators create events through a guided multi-step workflow that supports both
+        one-time and recurring events. The platform simplifies complex scheduling,
+        automatically generates recurring occurrences, and provides configurable registration
+        settings before an event is published.
+      </p>
+    </div>
+  </div>
+</div>
     <div class="mt-8 grid gap-6 md:grid-cols-2">
 
   <MiniFeatureBlock
@@ -281,15 +292,40 @@ import BulletCard from '../components/case-study/BulletCard.vue'
 import ScreenshotPlaceholder from '../components/case-study/ScreenshotPlaceholder.vue'
 import FeatureBlock from '../components/case-study/FeatureBlock.vue'
 import MiniFeatureBlock from '../components/case-study/MiniFeatureBlock.vue'
+import ScreenshotGallery from '../components/case-study/ScreenshotGallery.vue'
 
 import dashboardImage from '../assets/images/projects/event-platform/dashboard.png'
 import eventOverviewImage from '../assets/images/projects/event-platform/event-overview.png'
+import newEventStep1Image from '../assets/images/projects/event-platform/event-wizard-step1.png'
 import eventCreationReviewImage from '../assets/images/projects/event-platform/event-wizard-step2.png'
 import recurrenceBuilderImage from '../assets/images/projects/event-platform/event-wizard-recurrence-builder.png'
 import registrationSettingsImage from '../assets/images/projects/event-platform/event-wizard-step3.png'
 
 
 const technologies = ['Laravel', 'Vue 3', 'Quasar', 'SQL Server', 'REST APIs']
+
+const newEventWizardImages = [
+  {
+    src: newEventStep1Image,
+    alt: 'Event creation wizard showing event details and configuration fields.',
+    label: 'Event Details',
+  },
+  {
+    src: recurrenceBuilderImage,
+    alt: 'Recurring event pattern builder with frequency and end condition options.',
+    label: 'Recurrence',
+  },
+  {
+    src: eventCreationReviewImage,
+    alt: 'Event creation wizard showing generated recurring event instances for review.',
+    label: 'Review Dates',
+  },
+  {
+    src: registrationSettingsImage,
+    alt: 'Event creation wizard showing registration configuration settings.',
+    label: 'Registration',
+  },
+]
 
 
 </script>
