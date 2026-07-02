@@ -73,13 +73,7 @@
       the event lifecycle independently, reducing repetitive developer maintenance
       and giving event coordinators more ownership over their workflows.
     </p>
-    <p>
-  To accelerate development and improve consistency across projects, the
-  application was built on a reusable frontend platform that I designed for
-  Vue and Laravel applications. Shared layouts, navigation, theming, and UI
-  patterns reduced setup time while providing a consistent user experience
-  across future applications.
-</p>
+    
 
 <RouterLink
   to="/projects/reusable-frontend-platform"
@@ -333,6 +327,22 @@
     </div>
 
   </div>
+</CaseStudySection>
+<CaseStudySection title="Explore Related Work">
+  <p>
+    To accelerate development and improve consistency across projects, this
+    application was built on a reusable frontend platform that I designed for
+    Vue and Laravel applications. Shared layouts, navigation, theming, and
+    reusable UI patterns reduced setup time while creating a consistent
+    experience across future applications.
+  </p>
+
+  <RouterLink
+    :to="{ path: '/projects/reusable-frontend-platform' }"
+    class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand transition hover:text-brand-hover"
+  >
+    View Reusable Frontend Platform →
+  </RouterLink>
 </CaseStudySection>
     <CaseStudySection title="Lessons Learned">
       <p>
