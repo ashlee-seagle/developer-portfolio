@@ -37,19 +37,18 @@
         </div>
 
     
-        <div class="rounded-card border border-site-border bg-site-surface/70 p-5 shadow-card">
-             <!-- :src="blankStarterShell" -->
-  <ScreenshotPlaceholder
-    label="Blank starter application shell"
-     :src="reusableAppShell"
-    alt="Blank reusable frontend platform starter shell with default header, footer, and empty content area."
-  />
+       <div class="rounded-card border border-site-border bg-site-surface/70 p-5 shadow-card">
+        <ScreenshotPlaceholder
+            label="Blank starter application shell"
+            :src="blankStarterShell"
+            alt="Blank reusable frontend platform starter shell with placeholder app name, welcome message, and ready-for-development checklist."
+        />
 
-  <p class="mt-4 text-sm leading-6 text-site-muted">
-    Every new application begins with a preconfigured shell that includes
-    responsive layouts, theming, routing, navigation, and shared infrastructure.
-  </p>
-</div>
+        <p class="mt-4 text-sm leading-6 text-site-muted">
+            Every new application begins with a preconfigured shell that includes
+            responsive layouts, theming, routing, navigation, and shared infrastructure.
+        </p>
+        </div>
         
       </div>
 
@@ -163,56 +162,40 @@
     </h2>
 
     <p class="mt-4 text-lg leading-8 text-site-muted">
-  The platform combines reusable architecture, configuration-driven layouts,
-  standardized components, and shared application patterns to make new
-  development faster and more consistent.
-</p>
+      The platform combines reusable architecture, configurable layouts,
+      standardized interface patterns, and shared developer tooling to make new
+      applications faster to build, easier to maintain, and more consistent
+      across projects.
+    </p>
   </div>
 
   <div class="grid gap-8">
-    <div class="rounded-card border border-site-border bg-site-surface p-8">
-  <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
-    <ScreenshotGallery :images="starterShellImages" />
+    <FeatureBlock
+      title="Theme System"
+      description="Applications can apply different visual themes while keeping the same underlying layout, navigation, and component structure. Theme support allows teams to adapt branding without rebuilding shared UI patterns."
+    >
+      <template #media>
+        <ScreenshotGallery :images="themeSystemImages" />
+      </template>
+    </FeatureBlock>
 
-    <div>
-      <h3 class="text-xl font-semibold text-site-text">
-        Configuration-Driven Application Shell
-      </h3>
-
-      <p class="mt-3 text-sm leading-6 text-site-muted">
-        The starter template provides a functional application shell with layouts,
-        routing, theming, navigation, and shared infrastructure already configured.
-        Applications are assembled through configuration instead of rebuilding the
-        same foundation for every project.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div class="rounded-card border border-site-border bg-site-surface p-8">
-  <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
-    <ScreenshotGallery :images="layoutPatternImages" />
-
-    <div>
-      <h3 class="text-xl font-semibold text-site-text">
-        Flexible Application Layouts
-      </h3>
-
-      <p class="mt-3 text-sm leading-6 text-site-muted">
-        Applications can share the same underlying framework while adapting their
-        layout, navigation, branding, and theme behavior to fit different use cases.
-      </p>
-    </div>
-  </div>
-</div>
+    <FeatureBlock
+      title="Navigation Configuration"
+      description="Header navigation, sidebar navigation, and mobile navigation can be configured based on each application's needs, allowing teams to reuse the same shell while adapting the interface for different workflows."
+    >
+      <template #media>
+        <ScreenshotGallery :images="navigationConfigImages" />
+      </template>
+    </FeatureBlock>
 
     <FeatureBlock
       title="Reusable Component Library"
-      description="The platform includes reusable interface patterns for forms, tables, cards, tabs, grid views, list views, filters, status badges, and dashboard widgets."
-      :image-src="componentLibraryImage"
-      image-alt="Application screen showing reusable interface components including form fields, buttons, layout containers, and workflow controls."
-      image-caption="Shared interface components help applications feel consistent while reducing duplicated development work."
-    />
+      description="Shared interface patterns for forms, tables, grids, dialogs, filters, cards, and status indicators help applications feel consistent while reducing duplicated implementation work."
+    >
+      <template #media>
+        <ScreenshotGallery :images="componentLibraryImages" />
+      </template>
+    </FeatureBlock>
 
     <FeatureBlock
       title="Developer Documentation"
@@ -330,78 +313,110 @@ import ScreenshotPlaceholder from '../components/case-study/ScreenshotPlaceholde
 import FeatureBlock from '../components/case-study/FeatureBlock.vue'
 import ScreenshotGallery from '../components/case-study/ScreenshotGallery.vue'
 
-// TODO: Use current purple shell until blank/sidebar/theme variants are captured.
-import reusableAppShell from '../assets/images/projects/reusable-frontend-platform/uikit-app-shell.png'
-// TODO: Replace with screenshots showing the same shell with sidebar/nav/theme otions configured.
-import configurableAppShell from '../assets/images/projects/reusable-frontend-platform/configurable-app-shell.png'
-import componentLibraryImage from '../assets/images/projects/reusable-frontend-platform/form-component.png'
+
+
+import blankStarterShell from '../assets/images/projects/reusable-frontend-platform/blank-starter-shell.png'
+import blankStarterShellDark from '../assets/images/projects/reusable-frontend-platform/blank-starter-shell-dark.png'
+import brandThemeShell from '../assets/images/projects/reusable-frontend-platform/brand-theme-shell.png'
+import blueThemeShell from '../assets/images/projects/reusable-frontend-platform/blue-theme-shell.png'
+
+import topNavigationShell from '../assets/images/projects/reusable-frontend-platform/top-navigation-shell.png'
+import sidebarShell from '../assets/images/projects/reusable-frontend-platform/sidebar-shell.png'
+import combinedNavigationShell from '../assets/images/projects/reusable-frontend-platform/combined-navigation-shell.png'
+import mobileNavigationShell from '../assets/images/projects/reusable-frontend-platform/mobile-navigation-shell.png'
+
+import componentGridViewImage from '../assets/images/projects/reusable-frontend-platform/grid-table-view.png'
+import componentFormImage from '../assets/images/projects/reusable-frontend-platform/form-component.png'
+import componentTableImage from '../assets/images/projects/reusable-frontend-platform/table-view.png'
+
 import developerDocsImage from '../assets/images/projects/reusable-frontend-platform/uikit-guide.png'
-
-// TODO: Replace this with the true white/default blank starter shell screenshot.
-// import blankStarterShell from '../assets/images/projects/reusable-frontend-platform/blank-starter-shell.png'
-
-
-// TODO: Replace with dark mode shell or dashboard screenshot.
-import darkModeShell from '../assets/images/projects/reusable-frontend-platform/dark-mode-shell.png'
-
-// TODO: Replace with a completed app built from the starter platform.
-import completedAppExample from '../assets/images/projects/event-platform/events-list.png'
 
 const technologies = ['Laravel Blade', 'Vue 3', 'Quasar', 'Vue Router', 'Laravel Mix']
 
-const starterShellImages = [
+
+const themeSystemImages = [
   {
-    // src: blankStarterShell,
-     src: reusableAppShell,
-    alt: 'Blank reusable frontend platform starter shell with default header, footer, and empty content area.',
-    label: 'Blank Shell',
+    src: blankStarterShell,
+    alt: 'Blank starter application shell in the default light theme.',
+    label: 'Default',
     description:
-      'Developers begin with a preconfigured application shell instead of copying and troubleshooting legacy project setup.',
+      'The starter shell begins with a neutral default theme and placeholder application branding.',
   },
   {
-    src: reusableAppShell,
-    alt: 'Reusable frontend platform shell with configured sidebar and header navigation.',
-    label: 'Navigation',
+    src: blankStarterShellDark,
+    alt: 'Blank starter application shell in dark mode.',
+    label: 'Dark Mode',
     description:
-      'Sidebar and header navigation can be enabled through configuration when an application needs them.',
+      'Dark mode support is built into the shared shell so applications can switch themes without changing layout structure.',
   },
   {
-    src: configurableAppShell,
-    alt: 'Reusable frontend platform shell with configured branding and application layout.',
+    src: brandThemeShell,
+    alt: 'Blank starter application shell with purple brand theme applied.',
     label: 'Brand Theme',
     description:
-      'Applications can apply branding and layout options through configuration instead of custom implementation.',
+      'Applications can apply organization-specific branding through theme configuration.',
   },
   {
-    src: completedAppExample,
-    alt: 'Completed internal application built from the reusable frontend platform.',
-    label: 'Completed App',
+    src: blueThemeShell,
+    alt: 'Blank starter application shell with blue theme applied.',
+    label: 'Blue Theme',
     description:
-      'The same starter foundation can support production applications with customized workflows and content.',
+      'Theme variants allow the same foundation to support different visual identities.',
   },
 ]
 
-const layoutPatternImages = [
+const navigationConfigImages = [
   {
-    src: reusableAppShell,
-    alt: 'Reusable frontend platform layout with sidebar and header navigation.',
-    label: 'Sidebar Layout',
+    src: topNavigationShell,
+    alt: 'Starter application shell with header navigation enabled.',
+    label: 'Top Navigation',
     description:
-      'Applications can use a sidebar layout when they need persistent section-level navigation.',
+      'Header navigation can be enabled for applications that only need simple top-level links.',
   },
   {
-    src: configurableAppShell,
-    alt: 'Reusable frontend platform layout with header navigation and configured branding.',
-    label: 'Header Layout',
+    src: sidebarShell,
+    alt: 'Starter application shell with sidebar navigation enabled.',
+    label: 'Sidebar',
     description:
-      'Header navigation supports simpler applications that do not require a full sidebar.',
+      'Sidebar navigation can be enabled when applications need persistent section-level navigation.',
   },
   {
-    src: darkModeShell,
-    alt: 'Reusable frontend platform layout displayed in dark mode.',
-    label: 'Dark Mode',
+    src: combinedNavigationShell,
+    alt: 'Starter application shell with both header and sidebar navigation enabled.',
+    label: 'Combined',
     description:
-      'Theme support allows applications to switch between light and dark modes while preserving the same layout patterns.',
+      'Applications can combine header and sidebar navigation when workflows need both global and section-level links.',
+  },
+  {
+    src: mobileNavigationShell,
+    alt: 'Starter application shell showing mobile navigation drawer.',
+    label: 'Mobile',
+    description:
+      'The same navigation configuration supports responsive mobile drawer behavior.',
+  },
+]
+
+const componentLibraryImages = [
+  {
+    src: componentGridViewImage,
+    alt: 'Grid-style data view showing records displayed as cards with search and pagination.',
+    label: 'Grid View',
+    description:
+      'Reusable table patterns can display structured data as grids, lists, or traditional tables depending on the workflow.',
+  },
+  {
+    src: componentTableImage,
+    alt: 'Data table with filters, status badges, actions, and pagination.',
+    label: 'Table View',
+    description:
+      'Shared table patterns support filtering, status indicators, row actions, and pagination.',
+  },
+  {
+    src: componentFormImage,
+    alt: 'Reusable form pattern with fields, actions, and workflow controls.',
+    label: 'Forms',
+    description:
+      'Form patterns standardize common field layouts, actions, and validation states across applications.',
   },
 ]
 
