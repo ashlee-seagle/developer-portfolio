@@ -36,13 +36,19 @@
           </div>
         </div>
 
-        <div class="rounded-card border border-site-border bg-site-surface/70 p-5 shadow-card">
-          <ScreenshotPlaceholder
-            label="Reusable frontend platform starter template"
-            :src="reusableAppShell"
-            alt="Reusable frontend platform starter template with configurable header, sidebar navigation, and responsive application layout."
-          />
-        </div> 
+    
+       <div class="rounded-card border border-site-border bg-site-surface/70 p-5 shadow-card">
+        <ScreenshotPlaceholder
+            label="Blank starter application shell"
+            :src="blankStarterShell"
+            alt="Blank reusable frontend platform starter shell with placeholder app name, welcome message, and ready-for-development checklist."
+        />
+
+        <p class="mt-4 text-sm leading-6 text-site-muted">
+            Every new application begins with a preconfigured shell that includes
+            responsive layouts, theming, routing, navigation, and shared infrastructure.
+        </p>
+        </div>
         
       </div>
 
@@ -72,17 +78,18 @@
       </p>
     </CaseStudySection>
 
-    <div class="rounded-card border border-brand/30 bg-brand/5 p-6">
+<div class="rounded-card border border-brand/30 bg-brand/5 p-6">
   <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">
     Proven in Production
   </p>
 
   <p class="mt-3 leading-8 text-site-muted">
-    Rather than being a standalone proof of concept, this reusable platform was
-    developed alongside the Self-Service Event Management Platform and became the
-    foundation for that application. Components, layouts, and architectural
-    patterns created for the platform were immediately reused in production,
-    validating the approach while accelerating future development.
+    This reusable frontend platform was developed alongside the
+    Self-Service Event Management Platform and served as the foundation
+    for that application. Shared layouts, navigation, theming, reusable
+    components, and architectural patterns were immediately adopted in
+    production, validating the approach while accelerating future
+    development.
   </p>
 </div>
 
@@ -156,35 +163,39 @@
 
     <p class="mt-4 text-lg leading-8 text-site-muted">
       The platform combines reusable architecture, configurable layouts,
-      standardized components, and shared application patterns to make new
-      development faster and more consistent.
+      standardized interface patterns, and shared developer tooling to make new
+      applications faster to build, easier to maintain, and more consistent
+      across projects.
     </p>
   </div>
 
   <div class="grid gap-8">
     <FeatureBlock
-      title="Hybrid SPA Starter Template"
-      description="A reusable starter template provides a working Laravel, Vue 3, and Quasar foundation with routing, layouts, and application structure already configured."
-      :image-src="reusableAppShell"
-      image-alt="Reusable frontend platform starter template with configurable header, sidebar navigation, and responsive application layout."
-      image-caption="Developers begin with a fully configured application shell instead of rebuilding project setup from scratch."
-    />
+      title="Theme System"
+      description="Applications can apply different visual themes while keeping the same underlying layout, navigation, and component structure. Theme support allows teams to adapt branding without rebuilding shared UI patterns."
+    >
+      <template #media>
+        <ScreenshotGallery :images="themeSystemImages" />
+      </template>
+    </FeatureBlock>
 
     <FeatureBlock
-      title="Configurable Application Framework"
-      description="The platform provides a reusable application framework with configurable layouts, navigation, branding, themes, and responsive behavior. Applications share the same underlying architecture while adapting their interface through configuration instead of custom implementation."
-      :image-src="configurableAppShell"
-      image-alt="Configurable application framework showing header navigation, sidebar navigation, dashboard cards, tabs, filters, and data table."
-      image-caption="Applications inherit a shared framework with configurable navigation, branding, themes, layouts, and responsive behavior."
-    />
+      title="Navigation Configuration"
+      description="Header navigation, sidebar navigation, and mobile navigation can be configured based on each application's needs, allowing teams to reuse the same shell while adapting the interface for different workflows."
+    >
+      <template #media>
+        <ScreenshotGallery :images="navigationConfigImages" />
+      </template>
+    </FeatureBlock>
 
     <FeatureBlock
       title="Reusable Component Library"
-      description="The platform includes reusable interface patterns for forms, tables, cards, tabs, grid views, list views, filters, status badges, and dashboard widgets."
-      :image-src="componentLibraryImage"
-      image-alt="Application screen showing reusable interface components including form fields, buttons, layout containers, and workflow controls."
-      image-caption="Shared interface components help applications feel consistent while reducing duplicated development work."
-    />
+      description="Shared interface patterns for forms, tables, grids, dialogs, filters, cards, and status indicators help applications feel consistent while reducing duplicated implementation work."
+    >
+      <template #media>
+        <ScreenshotGallery :images="componentLibraryImages" />
+      </template>
+    </FeatureBlock>
 
     <FeatureBlock
       title="Developer Documentation"
@@ -268,6 +279,22 @@
       </div>
     </CaseStudySection>
 
+    <CaseStudySection title="Related Case Study">
+  <p>
+    The reusable frontend platform served as the foundation for the
+    Self-Service Event Management Platform. Explore the companion case
+    study to see how these shared layouts, components, and architectural
+    patterns were applied in a production application.
+  </p>
+
+  <RouterLink
+    :to="{ path: '/projects/self-service-event-management-platform' }"
+    class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand transition hover:text-brand-hover"
+  >
+    View Self-Service Event Management Platform →
+  </RouterLink>
+</CaseStudySection>
+
     <CaseStudySection title="Lessons Learned">
       <p>
         This project reinforced that improving developer workflows can create meaningful
@@ -284,11 +311,113 @@ import CaseStudySection from '../components/case-study/CaseStudySection.vue'
 import BulletCard from '../components/case-study/BulletCard.vue'
 import ScreenshotPlaceholder from '../components/case-study/ScreenshotPlaceholder.vue'
 import FeatureBlock from '../components/case-study/FeatureBlock.vue'
+import ScreenshotGallery from '../components/case-study/ScreenshotGallery.vue'
 
-import reusableAppShell from '../assets/images/projects/reusable-frontend-platform/uikit-app-shell.png'
-import configurableAppShell from '../assets/images/projects/reusable-frontend-platform/configurable-app-shell.png'
-import componentLibraryImage from '../assets/images/projects/reusable-frontend-platform/form-component.png'
+
+
+import blankStarterShell from '../assets/images/projects/reusable-frontend-platform/blank-starter-shell.png'
+import blankStarterShellDark from '../assets/images/projects/reusable-frontend-platform/blank-starter-shell-dark.png'
+import brandThemeShell from '../assets/images/projects/reusable-frontend-platform/brand-theme-shell.png'
+import blueThemeShell from '../assets/images/projects/reusable-frontend-platform/blue-theme-shell.png'
+
+import topNavigationShell from '../assets/images/projects/reusable-frontend-platform/top-navigation-shell.png'
+import sidebarShell from '../assets/images/projects/reusable-frontend-platform/sidebar-shell.png'
+import combinedNavigationShell from '../assets/images/projects/reusable-frontend-platform/combined-navigation-shell.png'
+import mobileNavigationShell from '../assets/images/projects/reusable-frontend-platform/mobile-navigation-shell.png'
+
+import componentGridViewImage from '../assets/images/projects/reusable-frontend-platform/grid-table-view.png'
+import componentFormImage from '../assets/images/projects/reusable-frontend-platform/form-component.png'
+import componentTableImage from '../assets/images/projects/reusable-frontend-platform/table-view.png'
+
 import developerDocsImage from '../assets/images/projects/reusable-frontend-platform/uikit-guide.png'
 
 const technologies = ['Laravel Blade', 'Vue 3', 'Quasar', 'Vue Router', 'Laravel Mix']
+
+
+const themeSystemImages = [
+  {
+    src: blankStarterShell,
+    alt: 'Blank starter application shell in the default light theme.',
+    label: 'Default',
+    description:
+      'The starter shell begins with a neutral default theme and placeholder application branding.',
+  },
+  {
+    src: blankStarterShellDark,
+    alt: 'Blank starter application shell in dark mode.',
+    label: 'Dark Mode',
+    description:
+      'Dark mode support is built into the shared shell so applications can switch themes without changing layout structure.',
+  },
+  {
+    src: brandThemeShell,
+    alt: 'Blank starter application shell with purple brand theme applied.',
+    label: 'Brand Theme',
+    description:
+      'Applications can apply organization-specific branding through theme configuration.',
+  },
+  {
+    src: blueThemeShell,
+    alt: 'Blank starter application shell with blue theme applied.',
+    label: 'Blue Theme',
+    description:
+      'Theme variants allow the same foundation to support different visual identities.',
+  },
+]
+
+const navigationConfigImages = [
+  {
+    src: topNavigationShell,
+    alt: 'Starter application shell with header navigation enabled.',
+    label: 'Top Navigation',
+    description:
+      'Header navigation can be enabled for applications that only need simple top-level links.',
+  },
+  {
+    src: sidebarShell,
+    alt: 'Starter application shell with sidebar navigation enabled.',
+    label: 'Sidebar',
+    description:
+      'Sidebar navigation can be enabled when applications need persistent section-level navigation.',
+  },
+  {
+    src: combinedNavigationShell,
+    alt: 'Starter application shell with both header and sidebar navigation enabled.',
+    label: 'Combined',
+    description:
+      'Applications can combine header and sidebar navigation when workflows need both global and section-level links.',
+  },
+  {
+    src: mobileNavigationShell,
+    alt: 'Starter application shell showing mobile navigation drawer.',
+    label: 'Mobile',
+    description:
+      'The same navigation configuration supports responsive mobile drawer behavior.',
+  },
+]
+
+const componentLibraryImages = [
+  {
+    src: componentGridViewImage,
+    alt: 'Grid-style data view showing records displayed as cards with search and pagination.',
+    label: 'Grid View',
+    description:
+      'Reusable table patterns can display structured data as grids, lists, or traditional tables depending on the workflow.',
+  },
+  {
+    src: componentTableImage,
+    alt: 'Data table with filters, status badges, actions, and pagination.',
+    label: 'Table View',
+    description:
+      'Shared table patterns support filtering, status indicators, row actions, and pagination.',
+  },
+  {
+    src: componentFormImage,
+    alt: 'Reusable form pattern with fields, actions, and workflow controls.',
+    label: 'Forms',
+    description:
+      'Form patterns standardize common field layouts, actions, and validation states across applications.',
+  },
+]
+
 </script> 
