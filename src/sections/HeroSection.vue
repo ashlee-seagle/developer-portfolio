@@ -34,12 +34,12 @@
         <span class="h-3 w-3 rounded-full bg-status-success"></span>
       </div>
 
-      <pre class="overflow-x-auto rounded-xl bg-site-bg p-5 text-sm leading-7 text-site-muted"><code>export function buildSolutions() {
-  return {
-    frontend: ['Vue', 'React', 'Tailwind'],
-    backend: ['Laravel', 'Node.js', 'REST APIs'],
-    database: ['MySQL'],
-    focus: 'Clean UI. Solid architecture.'
+      <pre class="overflow-x-auto rounded-xl bg-site-bg p-5 text-sm leading-7 text-site-muted"><code><span class="text-brand">export function</span> <span class="text-site-text">buildSolutions</span>() {
+  <span class="text-brand">return</span> {
+    <span class="text-status-success">frontend</span>: [<span class="text-status-warning">'Vue'</span>, <span class="text-status-warning">'React'</span>, <span class="text-status-warning">'Tailwind'</span>],
+    <span class="text-status-success">backend</span>: [<span class="text-status-warning">'Laravel'</span>, <span class="text-status-warning">'Node.js'</span>, <span class="text-status-warning">'REST APIs'</span>],
+    <span class="text-status-success">database</span>: [<span class="text-status-warning">'MySQL'</span>],
+    <span class="text-status-success">focus</span>: <span class="text-status-warning">'Clean UI. Solid architecture.'</span>
   }
 }</code></pre>
     </div>
