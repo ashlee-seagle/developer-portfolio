@@ -5,7 +5,7 @@
     v-if="project.image"
     :src="project.image"
     :alt="`${project.title} screenshot`"
-    class="h-full w-full object-cover"
+    class="h-full w-full object-contain"
   />
 
   <div
