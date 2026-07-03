@@ -18,15 +18,21 @@
     <!-- filters -->
 
     <div class="mt-8 flex gap-3">
-      <button>All</button>
-      <button>Professional</button>
-      <button>Personal</button>
-    </div>
+      <!--
+        TODO: If additional project filters are added, extract the filtering
+        UI into a reusable component and generate the buttons from a typed
+        array with v-for.
+      -->
+      <button 
+        :class="getFilterButtonClasses('all')" @click="filterProjects('all')">All</button>
+      <button :class="getFilterButtonClasses('professional')" @click="filterProjects('professional')">Professional</button>
+      <button :class="getFilterButtonClasses('personal')" @click="filterProjects('personal')">Personal</button>
+    </div> 
 
     <!-- cards -->
 
     <div class="mt-10 grid gap-6 lg:grid-cols-2">
-      <ProjectCard v-for="project in projects" 
+      <ProjectCard v-for="project in filteredProjects" 
         :key="project.title"
         :project="project"
       />
@@ -35,10 +41,16 @@
 </template>
 
 <script setup lang="ts">
+  import { ref, computed } from 'vue'
   import type { Project } from '../types/project';
   import ProjectCard from '../components/projects/ProjectCard.vue';
   import eventOverviewImage from '../assets/images/projects/event-platform/event-overview.png'
   import blankStarterShellImage from '../assets/images/projects/reusable-frontend-platform/blank-starter-shell.png'
+
+  type ProjectFilterType = 'all' | 'professional' | 'personal';
+  
+  const selectedProjectType = ref<ProjectFilterType>('all');
+
   
   const projects: Project[] = [
   {
@@ -66,4 +78,31 @@
     githubUrl: 'https://github.com/ashlee-seagle/workout-planner',
   },
 ]
+const getFilterButtonClasses = (type: ProjectFilterType) => {
+  const baseClasses =
+    'rounded-lg border border-site-border px-5 py-2.5 text-sm font-medium transition-colors duration-200'
+
+  const activeClasses =
+    'bg-brand text-white shadow-glow hover:bg-brand-hover hover:text-white'
+
+  const inactiveClasses =
+    'bg-site-surface text-site-muted hover:bg-site-surface2 hover:border-brand hover:text-brand'
+
+  return `${baseClasses} ${
+    selectedProjectType.value === type ? activeClasses : inactiveClasses
+  }`
+}
+
+const filterProjects = (type: ProjectFilterType)  => {
+    
+    selectedProjectType.value = type
+  }
+
+const filteredProjects = computed (() => {
+
+  if (selectedProjectType.value === 'all') {
+    return projects;
+  }
+  return projects.filter(project => project.type === selectedProjectType.value);
+})
 </script> 
