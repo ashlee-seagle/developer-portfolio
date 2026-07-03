@@ -44,13 +44,13 @@
   {
     title: 'Self-service Event Management Platform',
     type: 'professional',
-    description: 'Multi-tenant event management platform...',
+    description: 'Self-service event platform that streamlines event creation, attendee management, and communications.',
     technologies: ['Laravel', 'Vue', 'Quasar'],
     caseStudyRoute: '/projects/self-service-event-management-platform',
     image: eventOverviewImage,
   },
   {
-  title: 'Reusable Frontend Platform',
+  title: 'Reusable Front-end Platform',
   type: 'professional',
   description:
     'An internal frontend platform with reusable layouts, components, and templates that standardized new applications and saved 50+ engineering hours.',
