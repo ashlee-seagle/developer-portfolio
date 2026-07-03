@@ -37,28 +37,33 @@
 <script setup lang="ts">
   import type { Project } from '../types/project';
   import ProjectCard from '../components/projects/ProjectCard.vue';
+  import eventOverviewImage from '../assets/images/projects/event-platform/event-overview.png'
+  import blankStarterShellImage from '../assets/images/projects/reusable-frontend-platform/blank-starter-shell.png'
+  
   const projects: Project[] = [
   {
-    title: 'Self-service Event Management PLatform',
+    title: 'Self-service Event Management Platform',
     type: 'professional',
-    description: 'Multi-tenant event management platform...',
+    description: 'Self-service event platform that streamlines event creation, attendee management, and communications.',
     technologies: ['Laravel', 'Vue', 'Quasar'],
     caseStudyRoute: '/projects/self-service-event-management-platform',
+    image: eventOverviewImage,
   },
   {
-  title: 'Reusable Frontend Platform',
+  title: 'Reusable Front-end Platform',
   type: 'professional',
   description:
     'An internal frontend platform with reusable layouts, components, and templates that standardized new applications and saved 50+ engineering hours.',
   technologies: ['Laravel', 'Vue 3', 'Quasar', 'Vue Router'],
   caseStudyRoute: '/projects/reusable-frontend-platform',
+  image: blankStarterShellImage,
   },
   {
-    title: 'Workout Planner',
+    title: 'Plan My Workout',
     type: 'personal',
-    description: 'Workout generation application...',
+    description: 'A React application that generates personalized workout plans using AI based on user goals and available equipment.',
     technologies: ['React', 'TypeScript', 'Tailwind'],
-    githubUrl: '#',
+    githubUrl: 'https://github.com/ashlee-seagle/workout-planner',
   },
 ]
-</script>
+</script> 
