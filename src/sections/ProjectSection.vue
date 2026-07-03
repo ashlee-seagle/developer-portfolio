@@ -54,11 +54,11 @@
   caseStudyRoute: '/projects/reusable-frontend-platform',
   },
   {
-    title: 'Workout Planner',
+    title: 'Plan My Workout',
     type: 'personal',
-    description: 'Workout generation application...',
+    description: 'A React application that generates personalized workout plans using AI based on user goals and available equipment.',
     technologies: ['React', 'TypeScript', 'Tailwind'],
-    githubUrl: '#',
+    githubUrl: 'https://github.com/ashlee-seagle/workout-planner',
   },
 ]
-</script>
+</script> 

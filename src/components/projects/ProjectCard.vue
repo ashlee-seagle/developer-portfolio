@@ -44,11 +44,11 @@
     View Case Study →
   </RouterLink>
 
-      <a v-if="project.githubUrl" :href="project.githubUrl" class="text-site-text hover:text-brand">
+      <a v-if="project.githubUrl" :href="project.githubUrl" target="_blank" class="text-site-text hover:text-brand">
         GitHub →
       </a>
 
-      <a v-if="project.liveDemoUrl" :href="project.liveDemoUrl" class="text-site-text hover:text-brand">
+      <a v-if="project.liveDemoUrl" :href="project.liveDemoUrl" target="_blank" class="text-site-text hover:text-brand">
         Live Demo →
       </a>
     </div>
