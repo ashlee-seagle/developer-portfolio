@@ -34,14 +34,29 @@
         <span class="h-3 w-3 rounded-full bg-status-success"></span>
       </div>
 
-      <pre class="overflow-x-auto rounded-xl bg-site-bg p-5 text-sm leading-7 text-site-muted"><code><span class="text-brand">export function</span> <span class="text-site-text">buildSolutions</span>() {
+      <!-- Desktop -->
+<pre class="hidden overflow-x-auto rounded-xl bg-site-bg p-5 text-sm leading-7 text-site-muted sm:block">
+<code><span class="text-brand">export function</span> <span class="text-site-text">buildSolutions</span>() {
   <span class="text-brand">return</span> {
     <span class="text-status-success">frontend</span>: [<span class="text-status-warning">'Vue'</span>, <span class="text-status-warning">'React'</span>, <span class="text-status-warning">'Tailwind'</span>],
     <span class="text-status-success">backend</span>: [<span class="text-status-warning">'Laravel'</span>, <span class="text-status-warning">'Node.js'</span>, <span class="text-status-warning">'REST APIs'</span>],
-    <span class="text-status-success">database</span>: [<span class="text-status-warning">'MySQL'</span>],
+    <span class="text-status-success">database</span>: [<span class="text-status-warning">'MySQL', 'SQL Server'</span>],
     <span class="text-status-success">focus</span>: <span class="text-status-warning">'Clean UI. Solid architecture.'</span>
   }
-}</code></pre>
-    </div>
+}</code>
+</pre>
+
+<!-- Mobile -->
+<pre class="block rounded-xl bg-site-bg p-4 text-xs leading-6 text-site-muted sm:hidden">
+<code><span class="text-brand">export function</span> <span class="text-site-text">buildSolutions</span>() {
+  <span class="text-brand">return</span> {
+    <span class="text-status-success">frontend</span>: <span class="text-status-warning">true</span>,
+    <span class="text-status-success">backend</span>: <span class="text-status-warning">true</span>,
+    <span class="text-status-success">ux</span>: <span class="text-status-warning">true</span>,
+    <span class="text-status-success">focus</span>: <span class="text-status-warning">'Clean UI'</span>
+  }
+}</code>
+</pre>
+    </div> 
   </section>
 </template>
