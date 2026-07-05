@@ -110,40 +110,6 @@
       </div>
     </CaseStudySection>
 
-    <section class="grid gap-6 lg:grid-cols-2">
-      <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">
-          Challenge
-        </p>
-
-        <h2 class="mt-3 text-2xl font-bold text-site-text">
-          New applications required repetitive setup before work could begin.
-        </h2>
-
-        <p class="mt-4 leading-8 text-site-muted">
-          Developers often spent one to two hours copying folders, resolving Vue and
-          Quasar loading issues, configuring routes, and rebuilding common layouts
-          before a basic page successfully loaded.
-        </p>
-      </div>
-
-      <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">
-          Solution
-        </p>
-
-        <h2 class="mt-3 text-2xl font-bold text-site-text">
-          A reusable frontend platform for faster project starts.
-        </h2>
-
-        <p class="mt-4 leading-8 text-site-muted">
-          The platform provides a working application foundation with standardized
-          layouts, routing, navigation, theming, dark mode, and reusable components,
-          allowing developers to start building features sooner.
-        </p>
-      </div>
-    </section>
-
     <section class="space-y-8 border-b border-site-border/60 pb-16">
   <div class="max-w-3xl">
     <h2 class="text-2xl font-bold tracking-tight text-site-text">
