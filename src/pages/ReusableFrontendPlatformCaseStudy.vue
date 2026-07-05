@@ -79,7 +79,7 @@
   </p>
 </div>
 
-    <CaseStudySection title="My Role">
+    <CaseStudySection title="My Role" title-align="start">
       <p>
           I identified recurring setup inefficiencies across internal development and proposed a reusable front-end platform to standardize new applications. I designed the architecture, built the shared application foundation, documented implementation patterns, and enabled adoption across future projects.
         </p>
