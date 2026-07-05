@@ -56,20 +56,11 @@
 
     <CaseStudySection title="Project Overview">
       <p>
-        The platform was created to solve a recurring problem across internal
-        application development: every new project started differently.
+        The platform was created to solve a recurring problem across internal application development. Each new project started differently, often requiring one to two hours just to establish a working application shell. Developers copied folders from older projects, resolved Vue and Quasar setup issues, configured layouts and routes, and rebuilt common interface patterns before feature development could begin.
       </p>
 
       <p>
-        Developers were copying folders from older projects, troubleshooting Vue and
-        Quasar setup issues, manually configuring layouts and routes, and rebuilding
-        common interface patterns before feature development could begin.
-      </p>
-
-      <p>
-        I created a reusable frontend foundation that allowed developers to start from
-        a working application shell with routing, layouts, navigation, theming, dark mode,
-        and reusable components already in place.
+        To address these challenges, I designed and built a reusable frontend platform that provides a fully configured application foundation with standardized routing, layouts, navigation, theming, dark mode, and reusable components. Developers could begin building features immediately instead of recreating the same application foundation for every new project.
       </p>
     </CaseStudySection>
 

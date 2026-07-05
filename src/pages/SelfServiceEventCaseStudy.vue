@@ -55,17 +55,11 @@
 
   <CaseStudySection title="Project Overview">
     <p>
-      The platform was created to replace a developer-driven process for creating
-      and managing educational events. Previously, launching a new event required
-      the development team to create new sites, copy and modify legacy code,
-      update content, send repeated test emails, and manually trigger invitation
-      emails.
+      The platform was created to replace a developer-driven event management process. Previously, launching a new event required developers to create new sites, copy and modify legacy code, import attendee data, update content, send repeated test emails, and manually trigger invitation emails.
     </p>
 
     <p>
-      I proposed a self-service platform that would allow administrators to manage
-      the event lifecycle independently, reducing repetitive developer maintenance
-      and giving event coordinators more ownership over their workflows.
+      To address these challenges, I proposed and built a self-service platform that allows administrators to create and manage the complete event lifecycle independently. The platform centralizes event setup, registration, attendee management, recurring scheduling, email communications, and reporting into a guided administrative experience, reducing repetitive developer work while giving event coordinators greater ownership of their workflows.
     </p>
     
 
