@@ -266,41 +266,7 @@
     />
   </div>
 </section>
-
-    <CaseStudySection title="Technical Challenges">
-  <div class="grid gap-4 md:grid-cols-3">
-
-    <BulletCard
-      title="Flexible Data Modeling"
-      :items="[
-        'Supported multiple event types and relationships',
-        'Designed schema for configurable registration workflows',
-        'Balanced flexibility with maintainability',
-      ]"
-    />
-
-    <BulletCard
-      title="Workflow Design"
-      :items="[
-        'Converted manual processes into guided user workflows',
-        'Managed draft, registration, attendee, and email states',
-        'Designed intuitive experiences for non-technical users',
-      ]"
-    />
-
-    <BulletCard
-      title="Reusable Platform"
-      :items="[
-        'Built on a shared Vue/Laravel frontend platform',
-        'Created reusable UI patterns and layouts',
-        'Reduced setup time for future applications',
-      ]"
-    />
-
-  </div>
-</CaseStudySection>
-
-    <CaseStudySection title="Project Impact">
+<CaseStudySection title="Project Impact">
   <div class="grid gap-6 sm:grid-cols-2">
 
     <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
@@ -348,6 +314,41 @@
 
   </div>
 </CaseStudySection>
+
+    <CaseStudySection title="Technical Challenges">
+  <div class="grid gap-4 md:grid-cols-3">
+
+    <BulletCard
+      title="Flexible Data Modeling"
+      :items="[
+        'Supported multiple event types and relationships',
+        'Designed schema for configurable registration workflows',
+        'Balanced flexibility with maintainability',
+      ]"
+    />
+
+    <BulletCard
+      title="Workflow Design"
+      :items="[
+        'Converted manual processes into guided user workflows',
+        'Managed draft, registration, attendee, and email states',
+        'Designed intuitive experiences for non-technical users',
+      ]"
+    />
+
+    <BulletCard
+      title="Reusable Platform"
+      :items="[
+        'Built on a shared Vue/Laravel frontend platform',
+        'Created reusable UI patterns and layouts',
+        'Reduced setup time for future applications',
+      ]"
+    />
+
+  </div>
+</CaseStudySection>
+
+    
 <CaseStudySection title="Related Project">
   <p>
     To accelerate development and improve consistency across projects, this

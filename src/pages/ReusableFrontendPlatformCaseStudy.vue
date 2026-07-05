@@ -185,36 +185,7 @@
     />
   </div>
 </section>
-
-    <CaseStudySection title="Technical Challenges">
-      <div class="grid gap-4 md:grid-cols-2">
-        <BulletCard title="Hybrid Architecture" :items="[
-          'Used Laravel Blade for the application shell',
-          'Mounted Vue 3 and Quasar inside Blade views',
-          'Supported SPA-like experiences without requiring a full rewrite',
-        ]" />
-
-        <BulletCard title="Configuration-Driven UI" :items="[
-          'Created reusable header and sidebar link configuration',
-          'Supported optional sidebar and mobile navigation patterns',
-          'Allowed theme and logo behavior to be configured per application',
-        ]" />
-
-        <BulletCard title="Reusable Components" :items="[
-          'Standardized form, table, tab, grid, and list patterns',
-          'Reduced duplicated UI implementation across projects',
-          'Improved consistency between applications built by different developers',
-        ]" />
-
-        <BulletCard title="Developer Adoption" :items="[
-          'Created quickstart documentation for new apps',
-          'Reduced project setup from hours to minutes',
-          'Supported adoption across multiple internal applications',
-        ]" />
-      </div>
-    </CaseStudySection>
-
-    <CaseStudySection title="Project Impact">
+<CaseStudySection title="Project Impact">
       <div class="grid gap-6 sm:grid-cols-2">
         <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
           <h3 class="text-lg font-semibold text-site-text">
@@ -255,6 +226,35 @@
         </div>
       </div>
     </CaseStudySection>
+
+    <CaseStudySection title="Technical Challenges">
+      <div class="grid gap-4 md:grid-cols-2">
+        <BulletCard title="Hybrid Architecture" :items="[
+          'Used Laravel Blade for the application shell',
+          'Mounted Vue 3 and Quasar inside Blade views',
+          'Supported SPA-like experiences without requiring a full rewrite',
+        ]" />
+
+        <BulletCard title="Configuration-Driven UI" :items="[
+          'Created reusable header and sidebar link configuration',
+          'Supported optional sidebar and mobile navigation patterns',
+          'Allowed theme and logo behavior to be configured per application',
+        ]" />
+
+        <BulletCard title="Reusable Components" :items="[
+          'Standardized form, table, tab, grid, and list patterns',
+          'Reduced duplicated UI implementation across projects',
+          'Improved consistency between applications built by different developers',
+        ]" />
+
+        <BulletCard title="Developer Adoption" :items="[
+          'Created quickstart documentation for new apps',
+          'Reduced project setup from hours to minutes',
+          'Supported adoption across multiple internal applications',
+        ]" />
+      </div>
+    </CaseStudySection>
+
 
     <CaseStudySection title="Related Project">
   <p>
