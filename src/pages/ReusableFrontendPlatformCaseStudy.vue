@@ -126,49 +126,49 @@
 
   <div class="grid gap-8">
     <FeatureBlock
-      title="Theme System"
-      description="Applications can apply different visual themes while reusing the same layouts, navigation, and component structure, allowing branding to change without rebuilding the user interface."
-      :highlights="[
-        'Configurable color themes',
-        'Shared layouts and navigation',
-        'Consistent component styling',
-        'Brand customization without UI rewrites',
-      ]"
-    >
-      <template #media>
-        <ScreenshotGallery :images="themeSystemImages" />
-      </template>
-    </FeatureBlock>
+  title="Theme System"
+  description="Applications can apply different visual themes while reusing the same layouts, navigation, and component structure, allowing branding to change without rebuilding the user interface."
+  :highlights="[
+    'Configurable color themes',
+    'Shared layouts and navigation',
+    'Consistent component styling',
+    'Brand customization without UI rewrites',
+  ]"
+>
+  <template #media>
+    <ScreenshotGallery :images="themeSystemImages" />
+  </template>
+</FeatureBlock>
 
     <FeatureBlock
-      title="Navigation Configuration"
-      description="Applications can configure header, sidebar, and mobile navigation while reusing the same application shell, making it easy to support different workflows without duplicating infrastructure."
-      :highlights="[
-        'Configurable header and sidebar navigation',
-        'Responsive mobile navigation',
-        'Shared application shell',
-        'Flexible application structure',
-      ]"
-    >
-      <template #media>
-        <ScreenshotGallery :images="navigationConfigImages" />
-      </template>
-    </FeatureBlock>
+  title="Navigation Configuration"
+  description="Applications can configure header, sidebar, and mobile navigation while reusing the same application shell, making it easy to support different workflows without duplicating infrastructure."
+  :highlights="[
+    'Configurable navigation menus',
+    'Desktop and mobile support',
+    'Shared application shell',
+    'Flexible application structure',
+  ]"
+>
+  <template #media>
+    <ScreenshotGallery :images="navigationConfigImages" />
+  </template>
+</FeatureBlock>
 
     <FeatureBlock
-      title="Reusable Component Library"
-      description="Shared interface patterns for forms, tables, grids, dialogs, filters, cards, and status indicators help teams deliver consistent experiences while reducing duplicate implementation."
-      :highlights="[
-        'Forms and validation',
-        'Tables, grids, and filters',
-        'Cards, dialogs, and status indicators',
-        'Consistent UI across applications',
-      ]"
-    >
-      <template #media>
-        <ScreenshotGallery :images="componentLibraryImages" />
-      </template>
-    </FeatureBlock>
+  title="Reusable Component Library"
+  description="Shared interface patterns for forms, tables, grids, dialogs, filters, cards, and status indicators help teams deliver consistent experiences while reducing duplicate implementation."
+  :highlights="[
+    'Forms and validation',
+    'Tables, grids, and filters',
+    'Cards, dialogs, and status indicators',
+    'Consistent UI across applications',
+  ]"
+>
+  <template #media>
+    <ScreenshotGallery :images="componentLibraryImages" />
+  </template>
+</FeatureBlock>
 
     <FeatureBlock
       title="Developer Documentation"

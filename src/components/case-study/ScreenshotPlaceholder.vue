@@ -9,7 +9,7 @@
             :src="src"
             :alt="alt"
             loading="lazy"
-            class="w-full h-auto transition-transform duration-500 group-hover:scale-[1.015]"
+            class="w-full h-auto"
             />
 
             <div

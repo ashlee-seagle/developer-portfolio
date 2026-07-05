@@ -149,79 +149,35 @@
       ]"
     />
 
-    <div class="rounded-card border border-site-border bg-site-surface p-8">
-      <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
-        <ScreenshotGallery :images="newEventWizardImages" />
+    <FeatureBlock
+  title="Event Creation & Configuration"
+  description="A guided workflow helps administrators create one-time and recurring events, configure registration settings, and prepare events for launch without relying on developers for setup."
+  :highlights="[
+    'Multi-step event creation',
+    'One-time and recurring event support',
+    'Registration configuration',
+    'Guided setup before publishing',
+  ]"
+>
+  <template #media>
+    <ScreenshotGallery :images="newEventWizardImages" />
+  </template>
+</FeatureBlock>
 
-        <div>
-          <h3 class="text-xl font-semibold text-site-text">
-            Event Creation & Configuration
-          </h3>
-
-          <p class="mt-3 text-sm leading-6 text-site-muted">
-            A guided workflow helps administrators create one-time and recurring
-            events, configure registration settings, and prepare events for
-            launch without relying on developers for setup.
-          </p>
-
-          <ul class="mt-5 space-y-2 text-sm leading-6 text-site-muted">
-            <li class="flex gap-2">
-              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
-              <span>Multi-step event creation</span>
-            </li>
-            <li class="flex gap-2">
-              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
-              <span>One-time and recurring event support</span>
-            </li>
-            <li class="flex gap-2">
-              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
-              <span>Registration configuration</span>
-            </li>
-            <li class="flex gap-2">
-              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
-              <span>Guided setup before publishing</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="rounded-card border border-site-border bg-site-surface p-8">
-      <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
-        <ScreenshotGallery :images="attendeeImportImages" />
-
-        <div>
-          <h3 class="text-xl font-semibold text-site-text">
-            Attendee Import Wizard
-          </h3>
-
-          <p class="mt-3 text-sm leading-6 text-site-muted">
-            Administrators can upload attendee spreadsheets, map columns to
-            application fields, configure registration behavior, and review
-            records before completing the import.
-          </p>
-
-          <ul class="mt-5 space-y-2 text-sm leading-6 text-site-muted">
-            <li class="flex gap-2">
-              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
-              <span>Spreadsheet upload</span>
-            </li>
-            <li class="flex gap-2">
-              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
-              <span>Column mapping</span>
-            </li>
-            <li class="flex gap-2">
-              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
-              <span>Import review step</span>
-            </li>
-            <li class="flex gap-2">
-              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
-              <span>Reduced manual data entry</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+   <FeatureBlock
+  title="Attendee Import Wizard"
+  description="Administrators can upload attendee spreadsheets, map columns to application fields, configure registration behavior, and review records before completing the import."
+  :highlights="[
+    'Spreadsheet upload',
+    'Column mapping',
+    'Import review step',
+    'Reduced manual data entry',
+  ]"
+>
+  <template #media>
+    <ScreenshotGallery :images="attendeeImportImages" />
+  </template>
+</FeatureBlock>
 
     <FeatureBlock
       title="Attendee Management"
