@@ -1,7 +1,7 @@
 <template>
     <div :class="[
-            'overflow-hidden rounded-card bg-site-surface2',
-            src ? 'border border-site-border' : 'border border-dashed border-site-border',
+            'overflow-hidden bg-site-surface2',
+            src ? '' : 'rounded-card border border-dashed border-site-border',
             ]"
         >
             <img

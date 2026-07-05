@@ -41,7 +41,7 @@
         <img
           :src="eventOverviewImage"
           alt="Administrative workspace showing event details, upcoming events, setup progress, and management actions"
-          class="w-full rounded-lg border border-site-border"
+          class="w-full border border-site-border"
         />
 
         <p class="mt-4 text-sm leading-6 text-site-muted">
@@ -106,96 +106,165 @@
     </div>
   </CaseStudySection>
 
-    <section class="space-y-8 border-b border-site-border/60 pb-16">
+   <section class="space-y-8 border-b border-site-border/60 pb-16">
   <div class="max-w-3xl">
     <h2 class="text-2xl font-bold tracking-tight text-site-text">
       Feature Highlights
     </h2>
 
     <p class="mt-4 text-lg leading-8 text-site-muted">
-  Designed as a shared platform used by multiple administrative groups, the
-  application centralizes the entire event lifecycle—from creation and
-  registration to attendee management and communications—into one consistent
-  administrative experience. These are some of the key workflows that reduce
-  manual effort while empowering non-technical users.
-</p>
+      Designed for multiple administrative groups, the platform centralizes the
+      full event lifecycle — from event setup and registration to attendee
+      management, communications, and reporting — into one consistent
+      administrative experience.
+    </p>
   </div>
-
 
   <div class="grid gap-8">
     <FeatureBlock
-  title="Event Workspace & Setup Checklist"
-  description="A centralized workspace brings event details, recurring schedules, setup progress, and common management actions together in one place, helping administrators quickly understand what still needs attention before an event is ready."
-  :image-src="eventOverviewExpandedImage"
-  image-alt="Event workspace showing event details, recurring occurrences, setup checklist, and management actions"
-  image-caption="The setup checklist highlights required and recommended tasks so administrators can quickly see what remains before an event is ready to launch."
-/>
+      title="Event Workspace & Setup Checklist"
+      description="A centralized workspace brings event details, recurring schedules, setup progress, and common management actions together so administrators can quickly understand what still needs attention before an event is ready."
+      :image-src="eventOverviewExpandedImage"
+      image-alt="Event workspace showing event details, recurring occurrences, setup checklist, and management actions."
+      image-caption="The setup checklist highlights required and recommended tasks before an event is ready to launch."
+      :highlights="[
+        'Centralized event workspace',
+        'Setup checklist with progress tracking',
+        'Recurring schedule management',
+        'Quick access to common administrative tasks',
+      ]"
+    />
 
-  <FeatureBlock
-  title="Event Library"
-  description="Administrators can browse, search, filter, and manage upcoming and recurring events from a centralized library. Status indicators and quick actions make it easy to locate events and continue work throughout the event lifecycle."
-  :image-src="eventsListImage"
-  image-alt="Event library showing upcoming and recurring events with search, filters, status indicators, and management actions."
-  image-caption="A centralized event library helps administrators organize and manage events throughout their lifecycle."
-/>
+    <FeatureBlock
+      title="Event Library"
+      description="Administrators can browse, search, filter, and manage upcoming and recurring events from a centralized library. Status indicators and quick actions make it easier to locate events and continue work throughout the event lifecycle."
+      :image-src="eventsListImage"
+      image-alt="Event library showing upcoming and recurring events with search, filters, status indicators, and management actions."
+      image-caption="A centralized event library helps administrators organize and manage events throughout their lifecycle."
+      :highlights="[
+        'Search and filter events',
+        'View recurring and upcoming events',
+        'Quick access to common actions',
+        'Track event status at a glance',
+      ]"
+    />
+
     <div class="rounded-card border border-site-border bg-site-surface p-8">
-        <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
-    <ScreenshotGallery :images="newEventWizardImages" />
+      <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
+        <ScreenshotGallery :images="newEventWizardImages" />
 
-    <div>
-      <h3 class="text-xl font-semibold text-site-text">
-        Event Creation & Configuration
-      </h3>
+        <div>
+          <h3 class="text-xl font-semibold text-site-text">
+            Event Creation & Configuration
+          </h3>
 
-      <p class="mt-3 text-sm leading-6 text-site-muted">
-        Administrators create events through a guided multi-step workflow that supports both
-        one-time and recurring events. The platform simplifies complex scheduling,
-        automatically generates recurring occurrences, and provides configurable registration
-        settings before an event is published.
-      </p>
+          <p class="mt-3 text-sm leading-6 text-site-muted">
+            A guided workflow helps administrators create one-time and recurring
+            events, configure registration settings, and prepare events for
+            launch without relying on developers for setup.
+          </p>
+
+          <ul class="mt-5 space-y-2 text-sm leading-6 text-site-muted">
+            <li class="flex gap-2">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
+              <span>Multi-step event creation</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
+              <span>One-time and recurring event support</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
+              <span>Registration configuration</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
+              <span>Guided setup before publishing</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+
+    <div class="rounded-card border border-site-border bg-site-surface p-8">
+      <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
+        <ScreenshotGallery :images="attendeeImportImages" />
+
+        <div>
+          <h3 class="text-xl font-semibold text-site-text">
+            Attendee Import Wizard
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-site-muted">
+            Administrators can upload attendee spreadsheets, map columns to
+            application fields, configure registration behavior, and review
+            records before completing the import.
+          </p>
+
+          <ul class="mt-5 space-y-2 text-sm leading-6 text-site-muted">
+            <li class="flex gap-2">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
+              <span>Spreadsheet upload</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
+              <span>Column mapping</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
+              <span>Import review step</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>
+              <span>Reduced manual data entry</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</div>
-    
-
-<div class="rounded-card border border-site-border bg-site-surface p-8">
-  <div class="grid gap-8 lg:grid-cols-[1.6fr_1fr] lg:items-center">
-    <ScreenshotGallery :images="attendeeImportImages" />
-
-    <div>
-      <h3 class="text-xl font-semibold text-site-text">
-        Attendee Import Wizard
-      </h3>
-
-      <p class="mt-3 text-sm leading-6 text-site-muted">
-        Administrators can upload attendee spreadsheets, map columns to application fields, configure registration behavior, and review imported records before completing the import. The guided workflow reduces manual data entry while giving users confidence before data is committed.
-      </p>
-    </div>
-  </div>
-</div>
-
 
     <FeatureBlock
-  title="Attendee Management"
-  description="A centralized workspace for managing attendees throughout the event lifecycle, including invitation tracking, registration management, search and filtering, Excel import, reporting, and setup progress."
-  :image-src="attendeeManagement"
-  image-alt="Attendee management workspace showing attendee records, registration status, search and filtering tools, import options, and reporting."
-  image-caption="Administrators can manage registrations, invitations, attendee records, and reporting from one centralized workspace."
-/>
+      title="Attendee Management"
+      description="A centralized workspace supports attendee search, filtering, invitation tracking, registration management, imports, exports, reporting, and setup progress throughout the event lifecycle."
+      :image-src="attendeeManagement"
+      image-alt="Attendee management workspace showing attendee records, registration status, search and filtering tools, import options, and reporting."
+      image-caption="Administrators can manage registrations, invitations, attendee records, and reporting from one centralized workspace."
+      :highlights="[
+        'Invitation and registration tracking',
+        'Search and filter attendees',
+        'Excel import and export',
+        'Reporting and setup progress',
+      ]"
+    />
+
     <FeatureBlock
-  title="Email Management"
-  description="Create, customize, preview, and manage reusable email templates for invitations, confirmations, reminders, and other event communications while maintaining consistent messaging throughout the event lifecycle."
-  :image-src="emailManagement"
-  image-alt="Email management workspace showing reusable email templates, scheduling options, and communication tools."
-  image-caption="Reusable email templates simplify communication while ensuring consistent messaging across every event."
-/>
+      title="Email Management"
+      description="Administrators can create, customize, preview, and manage reusable email templates for invitations, confirmations, reminders, and other event communications."
+      :image-src="emailManagement"
+      image-alt="Email management workspace showing reusable email templates, scheduling options, and communication tools."
+      image-caption="Reusable email templates simplify communication while keeping messaging consistent across events."
+      :highlights="[
+        'Reusable email templates',
+        'Invitation and reminder workflows',
+        'Template preview and editing',
+        'Consistent communication across events',
+      ]"
+    />
+
     <FeatureBlock
       title="Group Dashboard"
-      description="Centralized visibility into event setup, registration metrics, invitations, email activity, and event status."
+      description="The group dashboard gives administrators visibility into event setup progress, registration activity, invitation status, email activity, and overall event readiness."
       :image-src="dashboardImage"
-      image-alt="Event dashboard showing setup status, registration metrics, and email activity"
+      image-alt="Event dashboard showing setup status, registration metrics, and email activity."
+      image-caption="Dashboard metrics help administrators monitor event progress and identify what needs attention."
+      :highlights="[
+        'Setup progress visibility',
+        'Registration and invitation metrics',
+        'Email activity tracking',
+        'Group-level event monitoring',
+      ]"
     />
-</div>
+  </div>
 </section>
 
     <CaseStudySection title="Technical Challenges">

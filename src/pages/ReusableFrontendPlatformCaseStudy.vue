@@ -117,17 +117,23 @@
     </h2>
 
     <p class="mt-4 text-lg leading-8 text-site-muted">
-      The platform combines reusable architecture, configurable layouts,
-      standardized interface patterns, and shared developer tooling to make new
-      applications faster to build, easier to maintain, and more consistent
-      across projects.
+      The platform provides a reusable application foundation with standardized
+      architecture, configurable layouts, shared UI patterns, and developer
+      tooling that helps teams build new applications faster while maintaining a
+      consistent user experience.
     </p>
   </div>
 
   <div class="grid gap-8">
     <FeatureBlock
       title="Theme System"
-      description="Applications can apply different visual themes while keeping the same underlying layout, navigation, and component structure. Theme support allows teams to adapt branding without rebuilding shared UI patterns."
+      description="Applications can apply different visual themes while reusing the same layouts, navigation, and component structure, allowing branding to change without rebuilding the user interface."
+      :highlights="[
+        'Configurable color themes',
+        'Shared layouts and navigation',
+        'Consistent component styling',
+        'Brand customization without UI rewrites',
+      ]"
     >
       <template #media>
         <ScreenshotGallery :images="themeSystemImages" />
@@ -136,7 +142,13 @@
 
     <FeatureBlock
       title="Navigation Configuration"
-      description="Header navigation, sidebar navigation, and mobile navigation can be configured based on each application's needs, allowing teams to reuse the same shell while adapting the interface for different workflows."
+      description="Applications can configure header, sidebar, and mobile navigation while reusing the same application shell, making it easy to support different workflows without duplicating infrastructure."
+      :highlights="[
+        'Configurable header and sidebar navigation',
+        'Responsive mobile navigation',
+        'Shared application shell',
+        'Flexible application structure',
+      ]"
     >
       <template #media>
         <ScreenshotGallery :images="navigationConfigImages" />
@@ -145,7 +157,13 @@
 
     <FeatureBlock
       title="Reusable Component Library"
-      description="Shared interface patterns for forms, tables, grids, dialogs, filters, cards, and status indicators help applications feel consistent while reducing duplicated implementation work."
+      description="Shared interface patterns for forms, tables, grids, dialogs, filters, cards, and status indicators help teams deliver consistent experiences while reducing duplicate implementation."
+      :highlights="[
+        'Forms and validation',
+        'Tables, grids, and filters',
+        'Cards, dialogs, and status indicators',
+        'Consistent UI across applications',
+      ]"
     >
       <template #media>
         <ScreenshotGallery :images="componentLibraryImages" />
@@ -154,10 +172,16 @@
 
     <FeatureBlock
       title="Developer Documentation"
-      description="Quickstart and configuration guides help developers launch a new app, configure routing, customize the application shell, and understand reusable component patterns."
+      description="Quickstart guides and implementation documentation help developers create new applications, configure the platform, and adopt reusable patterns with minimal setup time."
       :image-src="developerDocsImage"
       image-alt="Developer documentation showing quickstart and configuration guidance for the reusable frontend platform."
-      image-caption="Documentation supported adoption by making setup and configuration easier for other developers."
+      image-caption="Documentation made platform adoption faster by reducing setup and onboarding time."
+      :highlights="[
+        'Quickstart documentation',
+        'Configuration guidance',
+        'Reusable component references',
+        'Faster developer onboarding',
+      ]"
     />
   </div>
 </section>
