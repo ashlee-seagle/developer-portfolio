@@ -214,22 +214,20 @@
 
         <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
           <h3 class="text-lg font-semibold text-site-text">
-            Improved Consistency
+            Standardized New Applications
           </h3>
           <p class="mt-3 text-site-muted">
-            Applications now share standardized layouts, navigation, responsive behavior,
-            theme support, and reusable component patterns.
+            New projects now begin with consistent routing, layouts, theming, navigation, and shared UI patterns, reducing implementation differences across applications.
           </p>
         </div>
 
         <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
           <h3 class="text-lg font-semibold text-site-text">
-            Adopted Across Applications
+            Established a Shared Foundation
           </h3>
           <p class="mt-3 text-site-muted">
-            The platform became the standard foundation for new departmental applications
-            and is currently used across multiple internal projects.
-          </p>
+            The platform became the standard starting point for new internal applications, reducing duplicate effort and encouraging consistent development practices.
+          </p> 
         </div>
       </div>
     </CaseStudySection>

@@ -273,9 +273,8 @@
       </h3>
 
       <p class="mt-3 text-site-muted">
-        A modular architecture and reusable workflows provide a scalable
-        foundation for future enhancements and organizational adoption.
-      </p>
+        The modular architecture supports future enhancements and allows new event capabilities to be added without redesigning the platform.
+      </p> 
     </div>
 
   </div>
