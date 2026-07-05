@@ -80,23 +80,26 @@
 </div>
 
     <CaseStudySection title="My Role">
+      <p>
+          I identified recurring setup inefficiencies across internal development and proposed a reusable front-end platform to standardize new applications. I designed the architecture, built the shared application foundation, documented implementation patterns, and enabled adoption across future projects.
+        </p>
       <div class="grid gap-4 md:grid-cols-2">
-        <BulletCard title="Problem Identification" :items="[
-          'Identified repeated setup friction across new applications',
+        <BulletCard title="Product Strategy & Discovery" :items="[
+          'Analyzed recurring setup bottlenecks across new applications',
           'Recognized inconsistent styling and architecture patterns',
           'Proposed a reusable foundation to improve developer productivity',
         ]" />
 
-        <BulletCard title="Architecture & Standards" :items="[
+        <BulletCard title="Platform Architecture" :items="[
           'Designed a reusable Laravel Blade, Vue 3, and Quasar architecture',
           'Created shared layout and navigation patterns',
           'Standardized theme, dark mode, and responsive behavior',
         ]" />
 
-        <BulletCard title="Component Development" :items="[
+        <BulletCard title="Shared Component Development" :items="[
           'Built reusable form, table, grid, list, and tab components',
-          'Created configurable application shell templates',
-          'Included Vue Router and Provide/Inject patterns',
+          'Developed configurable application shell templates',
+          'Established Vue Router and Provide/Inject patterns',
         ]" />
 
         <BulletCard title="Documentation & Adoption" :items="[

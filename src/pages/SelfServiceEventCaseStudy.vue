@@ -73,9 +73,8 @@
 
   <CaseStudySection title="My Role">
     <p>
-      As the sole developer on the project, I led the platform from initial concept through release preparation, collaborating with stakeholders to define business requirements, design workflows, architect the solution, and deliver the application end to end.
+      As the sole developer, I led the platform from initial concept through release preparation. I partnered with stakeholders to define business requirements, design user workflows, architect the solution, and deliver the application end-to-end. I also refined the experience through iterative feedback, conducted end-to-end testing, and prepared the platform for production deployment.
     </p>
-
     <div class="grid gap-4 md:grid-cols-2">
       <BulletCard title="Product Strategy & Discovery" :items="[
         'Identified repetitive developer-driven workflows',
