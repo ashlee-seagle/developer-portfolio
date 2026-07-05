@@ -38,12 +38,11 @@
       </div>
 
       <div class="rounded-card border border-site-border bg-site-surface/70 p-5 shadow-card">
-        <img
-          :src="eventOverviewImage"
+        <ScreenshotPlaceholder
+            label="Event Overview Page"
+            :src="eventOverviewImage"
           alt="Administrative workspace showing event details, upcoming events, setup progress, and management actions"
-          class="w-full border border-site-border"
         />
-
         <p class="mt-4 text-sm leading-6 text-site-muted">
           A centralized administrative workspace provides quick access to event
           management, attendee workflows, communications, and reporting from a
@@ -334,6 +333,7 @@
 import CaseStudySection from '../components/case-study/CaseStudySection.vue'
 import BulletCard from '../components/case-study/BulletCard.vue'
 import FeatureBlock from '../components/case-study/FeatureBlock.vue'
+import ScreenshotPlaceholder from '../components/case-study/ScreenshotPlaceholder.vue'
 import ScreenshotGallery from '../components/case-study/ScreenshotGallery.vue'
 
 import eventOverviewImage from '../assets/images/projects/event-platform/event-overview.png'
