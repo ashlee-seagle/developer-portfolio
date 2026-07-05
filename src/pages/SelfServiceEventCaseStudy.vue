@@ -51,12 +51,6 @@
         </p>
       </div>
     </div>
-
-    <div class="mt-10 grid gap-4 sm:grid-cols-3">
-      <InfoCard label="Role" value="Sole Developer" />
-      <InfoCard label="Status" value="Pre-release" />
-      <InfoCard label="Type" value="Professional Project" />
-    </div>
   </section>
 
   <CaseStudySection title="Project Overview">
@@ -354,7 +348,6 @@
 
 <script setup lang="ts">
 
-import InfoCard from '../components/case-study/InfoCard.vue'
 import CaseStudySection from '../components/case-study/CaseStudySection.vue'
 import BulletCard from '../components/case-study/BulletCard.vue'
 import FeatureBlock from '../components/case-study/FeatureBlock.vue'

@@ -52,11 +52,6 @@
         
       </div>
 
-      <div class="mt-10 grid gap-4 sm:grid-cols-3">
-        <InfoCard label="Role" value="Lead Developer" />
-        <InfoCard label="Status" value="Adopted" />
-        <InfoCard label="Type" value="Internal Developer Platform" />
-      </div>
     </section>
 
     <CaseStudySection title="Project Overview">
@@ -306,7 +301,6 @@
 </template>
 
 <script setup lang="ts">
-import InfoCard from '../components/case-study/InfoCard.vue'
 import CaseStudySection from '../components/case-study/CaseStudySection.vue'
 import BulletCard from '../components/case-study/BulletCard.vue'
 import ScreenshotPlaceholder from '../components/case-study/ScreenshotPlaceholder.vue'
