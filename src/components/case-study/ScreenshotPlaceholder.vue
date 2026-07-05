@@ -1,7 +1,7 @@
 <template>
     <div :class="[
-            'overflow-hidden rounded-card bg-site-surface2',
-            src ? 'border border-site-border' : 'border border-dashed border-site-border',
+            'overflow-hidden bg-site-surface2',
+            src ? '' : 'rounded-card border border-dashed border-site-border',
             ]"
         >
             <img
@@ -9,7 +9,7 @@
             :src="src"
             :alt="alt"
             loading="lazy"
-            class="w-full h-auto transition-transform duration-500 group-hover:scale-[1.015]"
+            class="w-full h-auto"
             />
 
             <div

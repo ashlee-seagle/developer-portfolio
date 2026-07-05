@@ -1,6 +1,6 @@
 <template>
   <section class="grid gap-8 border-b border-site-border/60 pb-16 lg:grid-cols-[0.35fr_0.65fr]">
-    <div>
+    <div :class="titleAlign === 'center' ? 'self-center' : 'self-start'">
       <h2 class="text-2xl font-bold tracking-tight text-site-text">
         {{ title }}
       </h2>
@@ -13,7 +13,13 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  title: string
-}>()
+withDefaults(
+  defineProps<{
+    title: string
+    titleAlign?: 'start' | 'center'
+  }>(),
+  {
+    titleAlign: 'center',
+  }
+)
 </script>

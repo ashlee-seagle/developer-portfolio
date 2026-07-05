@@ -52,29 +52,15 @@
         
       </div>
 
-      <div class="mt-10 grid gap-4 sm:grid-cols-3">
-        <InfoCard label="Role" value="Lead Developer" />
-        <InfoCard label="Status" value="Adopted" />
-        <InfoCard label="Type" value="Internal Developer Platform" />
-      </div>
     </section>
 
     <CaseStudySection title="Project Overview">
       <p>
-        The platform was created to solve a recurring problem across internal
-        application development: every new project started differently.
+        The platform was created to solve a recurring problem across internal application development. Each new project started differently, often requiring one to two hours just to establish a working application shell. Developers copied folders from older projects, resolved Vue and Quasar setup issues, configured layouts and routes, and rebuilt common interface patterns before feature development could begin.
       </p>
 
       <p>
-        Developers were copying folders from older projects, troubleshooting Vue and
-        Quasar setup issues, manually configuring layouts and routes, and rebuilding
-        common interface patterns before feature development could begin.
-      </p>
-
-      <p>
-        I created a reusable frontend foundation that allowed developers to start from
-        a working application shell with routing, layouts, navigation, theming, dark mode,
-        and reusable components already in place.
+        To address these challenges, I designed and built a reusable frontend platform that provides a fully configured application foundation with standardized routing, layouts, navigation, theming, dark mode, and reusable components. Developers could begin building features immediately instead of recreating the same application foundation for every new project.
       </p>
     </CaseStudySection>
 
@@ -93,24 +79,27 @@
   </p>
 </div>
 
-    <CaseStudySection title="My Role">
+    <CaseStudySection title="My Role" title-align="start">
+      <p>
+          I identified recurring setup inefficiencies across internal development and proposed a reusable front-end platform to standardize new applications. I designed the architecture, built the shared application foundation, documented implementation patterns, and enabled adoption across future projects.
+        </p>
       <div class="grid gap-4 md:grid-cols-2">
-        <BulletCard title="Problem Identification" :items="[
-          'Identified repeated setup friction across new applications',
+        <BulletCard title="Product Strategy & Discovery" :items="[
+          'Analyzed recurring setup bottlenecks across new applications',
           'Recognized inconsistent styling and architecture patterns',
           'Proposed a reusable foundation to improve developer productivity',
         ]" />
 
-        <BulletCard title="Architecture & Standards" :items="[
+        <BulletCard title="Platform Architecture" :items="[
           'Designed a reusable Laravel Blade, Vue 3, and Quasar architecture',
           'Created shared layout and navigation patterns',
           'Standardized theme, dark mode, and responsive behavior',
         ]" />
 
-        <BulletCard title="Component Development" :items="[
+        <BulletCard title="Shared Component Development" :items="[
           'Built reusable form, table, grid, list, and tab components',
-          'Created configurable application shell templates',
-          'Included Vue Router and Provide/Inject patterns',
+          'Developed configurable application shell templates',
+          'Established Vue Router and Provide/Inject patterns',
         ]" />
 
         <BulletCard title="Documentation & Adoption" :items="[
@@ -121,91 +110,122 @@
       </div>
     </CaseStudySection>
 
-    <section class="grid gap-6 lg:grid-cols-2">
-      <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">
-          Challenge
-        </p>
-
-        <h2 class="mt-3 text-2xl font-bold text-site-text">
-          New applications required repetitive setup before work could begin.
-        </h2>
-
-        <p class="mt-4 leading-8 text-site-muted">
-          Developers often spent one to two hours copying folders, resolving Vue and
-          Quasar loading issues, configuring routes, and rebuilding common layouts
-          before a basic page successfully loaded.
-        </p>
-      </div>
-
-      <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">
-          Solution
-        </p>
-
-        <h2 class="mt-3 text-2xl font-bold text-site-text">
-          A reusable frontend platform for faster project starts.
-        </h2>
-
-        <p class="mt-4 leading-8 text-site-muted">
-          The platform provides a working application foundation with standardized
-          layouts, routing, navigation, theming, dark mode, and reusable components,
-          allowing developers to start building features sooner.
-        </p>
-      </div>
-    </section>
-
     <section class="space-y-8 border-b border-site-border/60 pb-16">
   <div class="max-w-3xl">
     <h2 class="text-2xl font-bold tracking-tight text-site-text">
-      Platform Highlights
+      Feature Highlights
     </h2>
 
     <p class="mt-4 text-lg leading-8 text-site-muted">
-      The platform combines reusable architecture, configurable layouts,
-      standardized interface patterns, and shared developer tooling to make new
-      applications faster to build, easier to maintain, and more consistent
-      across projects.
+      The platform provides a reusable application foundation with standardized
+      architecture, configurable layouts, shared UI patterns, and developer
+      tooling that helps teams build new applications faster while maintaining a
+      consistent user experience.
     </p>
   </div>
 
   <div class="grid gap-8">
     <FeatureBlock
-      title="Theme System"
-      description="Applications can apply different visual themes while keeping the same underlying layout, navigation, and component structure. Theme support allows teams to adapt branding without rebuilding shared UI patterns."
-    >
-      <template #media>
-        <ScreenshotGallery :images="themeSystemImages" />
-      </template>
-    </FeatureBlock>
+  title="Theme System"
+  description="Applications can apply different visual themes while reusing the same layouts, navigation, and component structure, allowing branding to change without rebuilding the user interface."
+  :highlights="[
+    'Configurable color themes',
+    'Shared layouts and navigation',
+    'Consistent component styling',
+    'Brand customization without UI rewrites',
+  ]"
+>
+  <template #media>
+    <ScreenshotGallery :images="themeSystemImages" />
+  </template>
+</FeatureBlock>
 
     <FeatureBlock
-      title="Navigation Configuration"
-      description="Header navigation, sidebar navigation, and mobile navigation can be configured based on each application's needs, allowing teams to reuse the same shell while adapting the interface for different workflows."
-    >
-      <template #media>
-        <ScreenshotGallery :images="navigationConfigImages" />
-      </template>
-    </FeatureBlock>
+  title="Navigation Configuration"
+  description="Applications can configure header, sidebar, and mobile navigation while reusing the same application shell, making it easy to support different workflows without duplicating infrastructure."
+  :highlights="[
+    'Configurable navigation menus',
+    'Desktop and mobile support',
+    'Shared application shell',
+    'Flexible application structure',
+  ]"
+>
+  <template #media>
+    <ScreenshotGallery :images="navigationConfigImages" />
+  </template>
+</FeatureBlock>
 
     <FeatureBlock
-      title="Reusable Component Library"
-      description="Shared interface patterns for forms, tables, grids, dialogs, filters, cards, and status indicators help applications feel consistent while reducing duplicated implementation work."
-    >
-      <template #media>
-        <ScreenshotGallery :images="componentLibraryImages" />
-      </template>
-    </FeatureBlock>
+  title="Reusable Component Library"
+  description="Shared interface patterns for forms, tables, grids, dialogs, filters, cards, and status indicators help teams deliver consistent experiences while reducing duplicate implementation."
+  :highlights="[
+    'Forms and validation',
+    'Tables, grids, and filters',
+    'Cards, dialogs, and status indicators',
+    'Consistent UI across applications',
+  ]"
+>
+  <template #media>
+    <ScreenshotGallery :images="componentLibraryImages" />
+  </template>
+</FeatureBlock>
 
     <FeatureBlock
       title="Developer Documentation"
-      description="Quickstart and configuration guides help developers launch a new app, configure routing, customize the application shell, and understand reusable component patterns."
+      description="Quickstart guides and implementation documentation help developers create new applications, configure the platform, and adopt reusable patterns with minimal setup time."
       :image-src="developerDocsImage"
       image-alt="Developer documentation showing quickstart and configuration guidance for the reusable frontend platform."
-      image-caption="Documentation supported adoption by making setup and configuration easier for other developers."
+      image-caption="Documentation made platform adoption faster by reducing setup and onboarding time."
+      :highlights="[
+        'Quickstart documentation',
+        'Configuration guidance',
+        'Reusable component references',
+        'Faster developer onboarding',
+      ]"
     />
   </div>
 </section>
+<CaseStudySection title="Project Impact">
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
+          <h3 class="text-lg font-semibold text-site-text">
+            Reduced Startup Time
+          </h3>
+          <p class="mt-3 text-site-muted">
+            New application setup was reduced from one to two hours to approximately
+            two minutes using the starter template.
+          </p>
+        </div>
+
+        <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
+          <h3 class="text-lg font-semibold text-site-text">
+            Saved Engineering Hours
+          </h3>
+          <p class="mt-3 text-site-muted">
+            The platform saved an estimated 50–60 development hours within the first
+            60 days of adoption.
+          </p>
+        </div>
+
+        <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
+          <h3 class="text-lg font-semibold text-site-text">
+            Standardized New Applications
+          </h3>
+          <p class="mt-3 text-site-muted">
+            New projects now begin with consistent routing, layouts, theming, navigation, and shared UI patterns, reducing implementation differences across applications.
+          </p>
+        </div>
+
+        <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
+          <h3 class="text-lg font-semibold text-site-text">
+            Established a Shared Foundation
+          </h3>
+          <p class="mt-3 text-site-muted">
+            The platform became the standard starting point for new internal applications, reducing duplicate effort and encouraging consistent development practices.
+          </p> 
+        </div>
+      </div>
+    </CaseStudySection>
 
     <CaseStudySection title="Technical Challenges">
       <div class="grid gap-4 md:grid-cols-2">
@@ -235,51 +255,8 @@
       </div>
     </CaseStudySection>
 
-    <CaseStudySection title="Project Impact">
-      <div class="grid gap-6 sm:grid-cols-2">
-        <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-          <h3 class="text-lg font-semibold text-site-text">
-            Reduced Startup Time
-          </h3>
-          <p class="mt-3 text-site-muted">
-            New application setup was reduced from one to two hours to approximately
-            two minutes using the starter template.
-          </p>
-        </div>
 
-        <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-          <h3 class="text-lg font-semibold text-site-text">
-            Saved Engineering Hours
-          </h3>
-          <p class="mt-3 text-site-muted">
-            The platform saved an estimated 50–60 development hours within the first
-            60 days of adoption.
-          </p>
-        </div>
-
-        <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-          <h3 class="text-lg font-semibold text-site-text">
-            Improved Consistency
-          </h3>
-          <p class="mt-3 text-site-muted">
-            Applications now share standardized layouts, navigation, responsive behavior,
-            theme support, and reusable component patterns.
-          </p>
-        </div>
-
-        <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-          <h3 class="text-lg font-semibold text-site-text">
-            Adopted Across Applications
-          </h3>
-          <p class="mt-3 text-site-muted">
-            The platform became the standard foundation for new departmental applications
-            and is currently used across multiple internal projects.
-          </p>
-        </div>
-      </div>
-    </CaseStudySection>
-
-    <CaseStudySection title="Related Case Study">
+    <CaseStudySection title="Related Project">
   <p>
     The reusable frontend platform served as the foundation for the
     Self-Service Event Management Platform. Explore the companion case
@@ -306,7 +283,6 @@
 </template>
 
 <script setup lang="ts">
-import InfoCard from '../components/case-study/InfoCard.vue'
 import CaseStudySection from '../components/case-study/CaseStudySection.vue'
 import BulletCard from '../components/case-study/BulletCard.vue'
 import ScreenshotPlaceholder from '../components/case-study/ScreenshotPlaceholder.vue'
