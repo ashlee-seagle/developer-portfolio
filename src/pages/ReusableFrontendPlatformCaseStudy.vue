@@ -113,7 +113,7 @@
     <section class="space-y-8 border-b border-site-border/60 pb-16">
   <div class="max-w-3xl">
     <h2 class="text-2xl font-bold tracking-tight text-site-text">
-      Platform Highlights
+      Feature Highlights
     </h2>
 
     <p class="mt-4 text-lg leading-8 text-site-muted">
@@ -256,7 +256,7 @@
       </div>
     </CaseStudySection>
 
-    <CaseStudySection title="Related Case Study">
+    <CaseStudySection title="Related Project">
   <p>
     The reusable frontend platform served as the foundation for the
     Self-Service Event Management Platform. Explore the companion case

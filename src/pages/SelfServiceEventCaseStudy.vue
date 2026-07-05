@@ -348,7 +348,7 @@
 
   </div>
 </CaseStudySection>
-<CaseStudySection title="Explore Related Work">
+<CaseStudySection title="Related Project">
   <p>
     To accelerate development and improve consistency across projects, this
     application was built on a reusable frontend platform that I designed for
