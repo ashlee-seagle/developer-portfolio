@@ -2,7 +2,7 @@
   <div>
     <figure>
       <div
-  class="flex aspect-video items-center justify-center overflow-hidden rounded-card bg-site-surface2"
+  class="flex aspect-video items-center justify-center overflow-hidden  bg-site-surface2"
 >
         <img
           :src="activeImage.src"
