@@ -1,15 +1,15 @@
 <template>
-  <section id="projects" class="py-16">
-    <div class="mb-10">
-      <p class="text-sm uppercase tracking-wide text-site-muted">
+  <section id="projects" class="section-block">
+    <div class="section-header">
+      <p class="eyebrow-label">
         Featured Work
       </p>
 
-      <h2 class="mt-2 text-4xl font-bold">
+      <h2 class="section-title mt-4">
         Projects
       </h2>
 
-      <p class="mt-4 max-w-2xl text-site-muted">
+      <p class="body-copy mt-4 max-w-2xl">
         Professional and personal projects showcasing
         full-stack development, UX design, and product ownership.
       </p>
@@ -17,7 +17,7 @@
 
     <!-- filters -->
 
-    <div class="mt-8 flex gap-3">
+    <div class="mt-8 flex flex-wrap gap-3">
       <!--
         TODO: If additional project filters are added, extract the filtering
         UI into a reusable component and generate the buttons from a typed
@@ -65,7 +65,7 @@
   title: 'Reusable Front-end Platform',
   type: 'professional',
   description:
-    'An internal frontend platform with reusable layouts, components, and templates that standardized new applications and saved 50+ engineering hours.',
+    'An internal front-end platform with reusable layouts, components, and templates that standardized new applications and saved 50+ engineering hours.',
   technologies: ['Laravel', 'Vue 3', 'Quasar', 'Vue Router'],
   caseStudyRoute: '/projects/reusable-frontend-platform',
   image: blankStarterShellImage,

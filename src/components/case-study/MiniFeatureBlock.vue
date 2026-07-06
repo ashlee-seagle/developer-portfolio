@@ -31,11 +31,11 @@
     </p>
 
     <div class="mt-5">
-      <h4 class="text-lg font-semibold text-site-text">
+      <h4 class="card-title">
         {{ title }}
       </h4>
 
-      <p class="mt-2 text-site-muted">
+      <p class="caption-copy mt-2">
         {{ description }}
       </p>
     </div>

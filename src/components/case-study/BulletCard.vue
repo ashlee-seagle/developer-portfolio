@@ -1,10 +1,10 @@
 <template>
-  <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-    <h3 class="font-semibold text-site-text">
+  <div class="card-surface px-10 py-8">
+    <h3 class="card-title">
       {{ title }}
     </h3>
 
-    <ul class="mt-4 space-y-2 text-sm leading-6 text-site-muted">
+    <ul class="caption-copy mt-6 space-y-3">
       <li
         v-for="item in items"
         :key="item"

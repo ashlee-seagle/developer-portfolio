@@ -9,48 +9,16 @@
   </div>
     
 <article class="space-y-20 py-4">
-  <section class="border-b border-site-border/60 pb-16">
-    <div class="mt-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-      <div>
-        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">
-          Professional Case Study
-        </p>
-
-        <h1 class="mt-4 text-5xl font-bold tracking-tight text-site-text">
-          Self-Service Event Management Platform
-        </h1>
-
-        <p class="mt-6 text-lg leading-8 text-site-muted">
-          A self-service event management platform that centralizes event creation,
-          registration, attendee management, recurring scheduling, reporting, and
-          communications through a single administrative experience.
-        </p>
-
-        <div class="mt-8 flex flex-wrap gap-2">
-          <span
-            v-for="tech in technologies"
-            :key="tech"
-            class="rounded-md bg-white/5 px-3 py-1.5 text-sm text-site-muted ring-1 ring-site-border"
-          >
-            {{ tech }}
-          </span>
-        </div>
-      </div>
-
-      <div class="rounded-card border border-site-border bg-site-surface/70 p-5 shadow-card">
-        <ScreenshotPlaceholder
-            label="Event Overview Page"
-            :src="eventOverviewImage"
-          alt="Administrative workspace showing event details, upcoming events, setup progress, and management actions"
-        />
-        <p class="mt-4 text-sm leading-6 text-site-muted">
-          A centralized administrative workspace provides quick access to event
-          management, attendee workflows, communications, and reporting from a
-          single application.
-        </p>
-      </div>
-    </div>
-  </section>
+  <CaseStudyHero
+    eyebrow="Professional Case Study"
+    title="Self-Service Event Management Platform"
+    description="A self-service event management platform that centralizes event creation, registration, attendee management, recurring scheduling, reporting, and communications through a single administrative experience."
+    :technologies="technologies"
+    screenshot-label="Event Overview Page"
+    :screenshot-src="eventOverviewImage"
+    screenshot-alt="Administrative workspace showing event details, upcoming events, setup progress, and management actions"
+    screenshot-caption="A centralized administrative workspace provides quick access to event management, attendee workflows, communications, and reporting from a single application."
+  />
 
   <CaseStudySection title="Project Overview">
     <p>
@@ -62,12 +30,6 @@
     </p>
     
 
-<RouterLink
-  to="/projects/reusable-frontend-platform"
-  class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-brand transition hover:opacity-80"
->
-  Learn more about the Reusable Frontend Platform →
-</RouterLink>
   </CaseStudySection>
 
   <CaseStudySection title="My Role">
@@ -107,11 +69,11 @@
 
    <section class="space-y-8 border-b border-site-border/60 pb-16">
   <div class="max-w-3xl">
-    <h2 class="text-2xl font-bold tracking-tight text-site-text">
+    <h2 class="subsection-title">
       Feature Highlights
     </h2>
 
-    <p class="mt-4 text-lg leading-8 text-site-muted">
+    <p class="lead-copy mt-4">
       Designed for multiple administrative groups, the platform centralizes the
       full event lifecycle — from event setup and registration to attendee
       management, communications, and reporting — into one consistent
@@ -224,45 +186,45 @@
 <CaseStudySection title="Project Impact">
   <div class="grid gap-6 sm:grid-cols-2">
 
-    <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-      <h3 class="text-lg font-semibold text-site-text">
+    <div class="card-surface p-6">
+      <h3 class="card-title">
   Reduced Developer Maintenance
 </h3>
 
-<p class="mt-3 text-site-muted">
+<p class="body-copy mt-3">
   Routine event creation and management shifted from engineering to
   administrative users, reducing repetitive developer involvement.
 </p>
     </div>
 
-    <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-      <h3 class="text-lg font-semibold text-site-text">
+    <div class="card-surface p-6">
+      <h3 class="card-title">
         Empowered Non-Technical Users
       </h3>
 
-      <p class="mt-3 text-site-muted">
+      <p class="body-copy mt-3">
         Administrators can independently create, configure, and manage events
         without relying on developers for routine updates.
       </p>
     </div>
 
-    <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-      <h3 class="text-lg font-semibold text-site-text">
+    <div class="card-surface p-6">
+      <h3 class="card-title">
         Unified Event Management
       </h3>
 
-      <p class="mt-3 text-site-muted">
+      <p class="body-copy mt-3">
         Event setup, registration, attendee management, communications, and
         recurring scheduling are managed from one centralized application.
       </p>
     </div>
 
-    <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-      <h3 class="text-lg font-semibold text-site-text">
+    <div class="card-surface p-6">
+      <h3 class="card-title">
         Built for Future Growth
       </h3>
 
-      <p class="mt-3 text-site-muted">
+      <p class="body-copy mt-3">
         The modular architecture supports future enhancements and allows new event capabilities to be added without redesigning the platform.
       </p> 
     </div>
@@ -333,7 +295,7 @@
 import CaseStudySection from '../components/case-study/CaseStudySection.vue'
 import BulletCard from '../components/case-study/BulletCard.vue'
 import FeatureBlock from '../components/case-study/FeatureBlock.vue'
-import ScreenshotPlaceholder from '../components/case-study/ScreenshotPlaceholder.vue'
+import CaseStudyHero from '../components/case-study/CaseStudyHero.vue'
 import ScreenshotGallery from '../components/case-study/ScreenshotGallery.vue'
 
 import eventOverviewImage from '../assets/images/projects/event-platform/event-overview.png'

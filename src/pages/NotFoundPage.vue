@@ -1,21 +1,21 @@
 <template>
-  <section class="flex min-h-[65vh] items-center justify-center py-20 text-center">
+  <section class="section-block flex min-h-[65vh] items-center justify-center text-center">
     <div class="max-w-2xl">
-      <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">
+      <p class="eyebrow-label">
         404
       </p>
 
-      <h1 class="mt-4 text-4xl font-bold tracking-tight text-site-text sm:text-5xl">
+      <h1 class="page-title mt-4">
         This page wandered off.
       </h1>
 
-      <p class="mt-5 text-base leading-7 text-site-muted">
+      <p class="body-copy mt-5">
         The page you’re looking for doesn’t exist or may have moved. Head back to the homepage to keep exploring my work.
       </p>
 
       <RouterLink
         to="/"
-        class="mt-8 inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-sm font-medium text-white shadow-glow transition hover:bg-brand-hover"
+        class="button-primary mt-8 shadow-glow hover:bg-brand-hover"
       >
         Return Home
       </RouterLink>
