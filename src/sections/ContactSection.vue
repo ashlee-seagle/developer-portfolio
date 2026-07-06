@@ -1,6 +1,6 @@
 <template>
   <section id="contact" class="section-block border-t border-site-border/60">
-    <div class="rounded-card border border-site-border bg-site-surface/80 p-8 shadow-card sm:p-10">
+    <div class="rounded-card border border-site-border bg-site-surface/80 px-7 py-7 shadow-card sm:px-9 sm:py-8">
       <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div>
           <p class="eyebrow-label">
@@ -8,7 +8,7 @@
           </p>
 
           <h2 class="section-title mt-4">
-            Interested in working together?
+            Let’s build thoughtful software together.
           </h2>
 
           <p class="body-copy mt-4 max-w-2xl">
@@ -17,11 +17,11 @@
           </p>
         </div>
 
-        <div class="flex flex-col gap-4 sm:flex-row lg:justify-end">
+        <div class="flex flex-col gap-3 sm:flex-row lg:items-center lg:justify-end">
 
           <a
             href="https://www.linkedin.com/in/ashleeseagle/"
-            class="button-secondary hover:border-site-muted hover:bg-white/5"
+            class="button-secondary min-w-32 px-7 hover:border-site-muted hover:bg-white/5 hover:text-white"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -30,7 +30,7 @@
 
           <a
             href="https://github.com/ashlee-seagle/"
-            class="button-secondary hover:border-site-muted hover:bg-white/5"
+            class="button-secondary min-w-32 px-7 hover:border-site-muted hover:bg-white/5 hover:text-white"
             target="_blank"
             rel="noopener noreferrer"
           >

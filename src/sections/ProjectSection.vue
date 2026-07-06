@@ -65,7 +65,7 @@
   title: 'Reusable Front-end Platform',
   type: 'professional',
   description:
-    'An internal frontend platform with reusable layouts, components, and templates that standardized new applications and saved 50+ engineering hours.',
+    'An internal front-end platform with reusable layouts, components, and templates that standardized new applications and saved 50+ engineering hours.',
   technologies: ['Laravel', 'Vue 3', 'Quasar', 'Vue Router'],
   caseStudyRoute: '/projects/reusable-frontend-platform',
   image: blankStarterShellImage,

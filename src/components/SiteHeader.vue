@@ -1,12 +1,15 @@
 <template>
     <header class="sticky top-0 z-50 border-b border-site-border/60 bg-site-bg/80 backdrop-blur-xl">
         <nav  aria-label="Primary navigation" class="site-container flex items-center justify-between py-4">
-          <a href="#" class="flex items-center gap-3 font-semibold">
-            <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-brand text-white">
-              A
-            </div>
-            <span>Ashlee Seagle</span>
-          </a>
+          <RouterLink
+  to="/"
+  class="flex items-center gap-3 font-semibold"
+>
+  <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-brand text-white">
+    A
+  </div>
+  <span>Ashlee Seagle</span>
+</RouterLink>
 
           <NavigationMenu />
 

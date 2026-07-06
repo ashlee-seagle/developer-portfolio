@@ -9,50 +9,16 @@
   </div>
 
   <article class="space-y-20 py-4">
-    <section class="border-b border-site-border/60 pb-16">
-      <div class="mt-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-        <div>
-          <p class="eyebrow-label">
-            Professional Case Study
-          </p>
-
-          <h1 class="page-title mt-4">
-            Reusable Frontend Platform
-          </h1>
-
-          <p class="lead-copy mt-6">
-            A reusable UI kit and hybrid SPA starter template built to standardize
-            Laravel, Vue 3, and Quasar applications while reducing repetitive setup work.
-          </p>
-
-          <div class="mt-8 flex flex-wrap gap-2">
-            <span
-              v-for="tech in technologies"
-              :key="tech"
-              class="rounded-md bg-white/5 px-3 py-1.5 text-sm text-site-muted ring-1 ring-site-border"
-            >
-              {{ tech }}
-            </span>
-          </div>
-        </div>
-
-    
-       <div class="card-surface p-5 shadow-card">
-        <ScreenshotPlaceholder
-            label="Blank starter application shell"
-            :src="blankStarterShell"
-            alt="Blank reusable frontend platform starter shell with placeholder app name, welcome message, and ready-for-development checklist."
-        />
-
-        <p class="caption-copy mt-4">
-            Every new application begins with a preconfigured shell that includes
-            responsive layouts, theming, routing, navigation, and shared infrastructure.
-        </p>
-        </div>
-        
-      </div>
-
-    </section>
+    <CaseStudyHero
+      eyebrow="Professional Case Study"
+      title="Reusable Frontend Platform"
+      description="A reusable UI kit and hybrid SPA starter template built to standardize Laravel, Vue 3, and Quasar applications while reducing repetitive setup work."
+      :technologies="technologies"
+      screenshot-label="Blank starter application shell"
+      :screenshot-src="blankStarterShell"
+      screenshot-alt="Blank reusable frontend platform starter shell with placeholder app name, welcome message, and ready-for-development checklist."
+      screenshot-caption="Every new application begins with a preconfigured shell that includes responsive layouts, theming, routing, navigation, and shared infrastructure."
+    />
 
     <CaseStudySection title="Project Overview">
       <p>
@@ -285,7 +251,7 @@
 <script setup lang="ts">
 import CaseStudySection from '../components/case-study/CaseStudySection.vue'
 import BulletCard from '../components/case-study/BulletCard.vue'
-import ScreenshotPlaceholder from '../components/case-study/ScreenshotPlaceholder.vue'
+import CaseStudyHero from '../components/case-study/CaseStudyHero.vue'
 import FeatureBlock from '../components/case-study/FeatureBlock.vue'
 import ScreenshotGallery from '../components/case-study/ScreenshotGallery.vue'
 

@@ -9,48 +9,16 @@
   </div>
     
 <article class="space-y-20 py-4">
-  <section class="border-b border-site-border/60 pb-16">
-    <div class="mt-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-      <div>
-        <p class="eyebrow-label">
-          Professional Case Study
-        </p>
-
-        <h1 class="page-title mt-4">
-          Self-Service Event Management Platform
-        </h1>
-
-        <p class="lead-copy mt-6">
-          A self-service event management platform that centralizes event creation,
-          registration, attendee management, recurring scheduling, reporting, and
-          communications through a single administrative experience.
-        </p>
-
-        <div class="mt-8 flex flex-wrap gap-2">
-          <span
-            v-for="tech in technologies"
-            :key="tech"
-            class="rounded-md bg-white/5 px-3 py-1.5 text-sm text-site-muted ring-1 ring-site-border"
-          >
-            {{ tech }}
-          </span>
-        </div>
-      </div>
-
-      <div class="card-surface p-5 shadow-card">
-        <ScreenshotPlaceholder
-            label="Event Overview Page"
-            :src="eventOverviewImage"
-          alt="Administrative workspace showing event details, upcoming events, setup progress, and management actions"
-        />
-        <p class="caption-copy mt-4">
-          A centralized administrative workspace provides quick access to event
-          management, attendee workflows, communications, and reporting from a
-          single application.
-        </p>
-      </div>
-    </div>
-  </section>
+  <CaseStudyHero
+    eyebrow="Professional Case Study"
+    title="Self-Service Event Management Platform"
+    description="A self-service event management platform that centralizes event creation, registration, attendee management, recurring scheduling, reporting, and communications through a single administrative experience."
+    :technologies="technologies"
+    screenshot-label="Event Overview Page"
+    :screenshot-src="eventOverviewImage"
+    screenshot-alt="Administrative workspace showing event details, upcoming events, setup progress, and management actions"
+    screenshot-caption="A centralized administrative workspace provides quick access to event management, attendee workflows, communications, and reporting from a single application."
+  />
 
   <CaseStudySection title="Project Overview">
     <p>
@@ -62,12 +30,6 @@
     </p>
     
 
-<RouterLink
-  to="/projects/reusable-frontend-platform"
-  class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-brand transition hover:opacity-80"
->
-  Learn more about the Reusable Frontend Platform →
-</RouterLink>
   </CaseStudySection>
 
   <CaseStudySection title="My Role">
@@ -333,7 +295,7 @@
 import CaseStudySection from '../components/case-study/CaseStudySection.vue'
 import BulletCard from '../components/case-study/BulletCard.vue'
 import FeatureBlock from '../components/case-study/FeatureBlock.vue'
-import ScreenshotPlaceholder from '../components/case-study/ScreenshotPlaceholder.vue'
+import CaseStudyHero from '../components/case-study/CaseStudyHero.vue'
 import ScreenshotGallery from '../components/case-study/ScreenshotGallery.vue'
 
 import eventOverviewImage from '../assets/images/projects/event-platform/event-overview.png'

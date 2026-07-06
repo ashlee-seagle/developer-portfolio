@@ -35,7 +35,7 @@
         {{ project.description }}
       </p>
 
-      <div class="mt-8 flex flex-wrap gap-2">
+      <div class="mt-7 flex flex-wrap gap-2">
         <TechBadge
           v-for="technology in project.technologies"
           :key="technology"
@@ -43,7 +43,7 @@
         />
       </div>
 
-      <div class="mt-6 flex flex-wrap gap-4 text-md font-medium">
+      <div class="mt-5 flex flex-wrap gap-4 text-md font-medium">
         <RouterLink
           v-if="project.caseStudyRoute"
           :to="project.caseStudyRoute"
