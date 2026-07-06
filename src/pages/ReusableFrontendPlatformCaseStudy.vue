@@ -12,15 +12,15 @@
     <section class="border-b border-site-border/60 pb-16">
       <div class="mt-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">
+          <p class="eyebrow-label">
             Professional Case Study
           </p>
 
-          <h1 class="mt-4 text-5xl font-bold tracking-tight text-site-text">
+          <h1 class="page-title mt-4">
             Reusable Frontend Platform
           </h1>
 
-          <p class="mt-6 text-lg leading-8 text-site-muted">
+          <p class="lead-copy mt-6">
             A reusable UI kit and hybrid SPA starter template built to standardize
             Laravel, Vue 3, and Quasar applications while reducing repetitive setup work.
           </p>
@@ -37,14 +37,14 @@
         </div>
 
     
-       <div class="rounded-card border border-site-border bg-site-surface/70 p-5 shadow-card">
+       <div class="card-surface p-5 shadow-card">
         <ScreenshotPlaceholder
             label="Blank starter application shell"
             :src="blankStarterShell"
             alt="Blank reusable frontend platform starter shell with placeholder app name, welcome message, and ready-for-development checklist."
         />
 
-        <p class="mt-4 text-sm leading-6 text-site-muted">
+        <p class="caption-copy mt-4">
             Every new application begins with a preconfigured shell that includes
             responsive layouts, theming, routing, navigation, and shared infrastructure.
         </p>
@@ -65,11 +65,11 @@
     </CaseStudySection>
 
 <div class="rounded-card border border-brand/30 bg-brand/5 p-6">
-  <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand">
+  <p class="eyebrow-label">
     Proven in Production
   </p>
 
-  <p class="mt-3 leading-8 text-site-muted">
+  <p class="body-copy mt-3">
     This reusable frontend platform was developed alongside the
     Self-Service Event Management Platform and served as the foundation
     for that application. Shared layouts, navigation, theming, reusable
@@ -112,11 +112,11 @@
 
     <section class="space-y-8 border-b border-site-border/60 pb-16">
   <div class="max-w-3xl">
-    <h2 class="text-2xl font-bold tracking-tight text-site-text">
+    <h2 class="subsection-title">
       Feature Highlights
     </h2>
 
-    <p class="mt-4 text-lg leading-8 text-site-muted">
+    <p class="lead-copy mt-4">
       The platform provides a reusable application foundation with standardized
       architecture, configurable layouts, shared UI patterns, and developer
       tooling that helps teams build new applications faster while maintaining a
@@ -187,40 +187,40 @@
 </section>
 <CaseStudySection title="Project Impact">
       <div class="grid gap-6 sm:grid-cols-2">
-        <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-          <h3 class="text-lg font-semibold text-site-text">
+        <div class="card-surface p-6">
+          <h3 class="card-title">
             Reduced Startup Time
           </h3>
-          <p class="mt-3 text-site-muted">
+          <p class="body-copy mt-3">
             New application setup was reduced from one to two hours to approximately
             two minutes using the starter template.
           </p>
         </div>
 
-        <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-          <h3 class="text-lg font-semibold text-site-text">
+        <div class="card-surface p-6">
+          <h3 class="card-title">
             Saved Engineering Hours
           </h3>
-          <p class="mt-3 text-site-muted">
+          <p class="body-copy mt-3">
             The platform saved an estimated 50–60 development hours within the first
             60 days of adoption.
           </p>
         </div>
 
-        <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-          <h3 class="text-lg font-semibold text-site-text">
+        <div class="card-surface p-6">
+          <h3 class="card-title">
             Standardized New Applications
           </h3>
-          <p class="mt-3 text-site-muted">
+          <p class="body-copy mt-3">
             New projects now begin with consistent routing, layouts, theming, navigation, and shared UI patterns, reducing implementation differences across applications.
           </p>
         </div>
 
-        <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-          <h3 class="text-lg font-semibold text-site-text">
+        <div class="card-surface p-6">
+          <h3 class="card-title">
             Established a Shared Foundation
           </h3>
-          <p class="mt-3 text-site-muted">
+          <p class="body-copy mt-3">
             The platform became the standard starting point for new internal applications, reducing duplicate effort and encouraging consistent development practices.
           </p> 
         </div>

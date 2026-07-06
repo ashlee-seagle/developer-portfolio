@@ -1,6 +1,6 @@
 <template>
-  <div class="rounded-card border border-site-border bg-site-surface/70 p-5">
-    <p class="text-sm text-site-muted">
+  <div class="card-surface p-5">
+    <p class="caption-copy">
       {{ label }}
     </p>
 

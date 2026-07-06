@@ -1,5 +1,5 @@
 <template>
-  <article class="group rounded-card border border-site-border bg-site-surface p-4 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+  <article class="group rounded-card border border-site-border bg-site-surface p-4 shadow-card transition-colors duration-300 hover:bg-site-surface/80">
     <div
       class="mb-6 flex aspect-[16/10] items-center justify-center overflow-hidden rounded-lg p-5"
       :class="project.image
@@ -11,7 +11,7 @@
         v-if="project.image"
         :src="project.image"
         :alt="`${project.title} screenshot`"
-        class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+        class="h-full w-full object-contain"
       />
 
       <div

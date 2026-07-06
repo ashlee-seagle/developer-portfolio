@@ -1,15 +1,15 @@
 <template>
-  <section id="skills" class="border-t border-site-border/60 py-20">
-    <div class="mb-10 max-w-3xl">
-      <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">
+  <section id="skills" class="section-block border-t border-site-border/60">
+    <div class="section-header">
+      <p class="eyebrow-label">
         Skills
       </p>
 
-      <h2 class="mt-3 text-4xl font-bold tracking-tight text-site-text">
+      <h2 class="section-title mt-4">
         Technologies I use to build practical, maintainable software.
       </h2>
 
-      <p class="mt-4 text-site-muted">
+      <p class="body-copy mt-4">
         My work spans frontend development, backend APIs, databases, UX implementation,
         and internal tooling.
       </p>
@@ -19,9 +19,9 @@
       <div
         v-for="group in skillGroups"
         :key="group.title"
-        class="rounded-card border border-site-border bg-site-surface/70 p-6"
+        class="card-surface p-6"
       >
-        <h3 class="text-lg font-semibold text-site-text">
+        <h3 class="card-title">
           {{ group.title }}
         </h3>
 

@@ -12,15 +12,15 @@
   <section class="border-b border-site-border/60 pb-16">
     <div class="mt-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
       <div>
-        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">
+        <p class="eyebrow-label">
           Professional Case Study
         </p>
 
-        <h1 class="mt-4 text-5xl font-bold tracking-tight text-site-text">
+        <h1 class="page-title mt-4">
           Self-Service Event Management Platform
         </h1>
 
-        <p class="mt-6 text-lg leading-8 text-site-muted">
+        <p class="lead-copy mt-6">
           A self-service event management platform that centralizes event creation,
           registration, attendee management, recurring scheduling, reporting, and
           communications through a single administrative experience.
@@ -37,13 +37,13 @@
         </div>
       </div>
 
-      <div class="rounded-card border border-site-border bg-site-surface/70 p-5 shadow-card">
+      <div class="card-surface p-5 shadow-card">
         <ScreenshotPlaceholder
             label="Event Overview Page"
             :src="eventOverviewImage"
           alt="Administrative workspace showing event details, upcoming events, setup progress, and management actions"
         />
-        <p class="mt-4 text-sm leading-6 text-site-muted">
+        <p class="caption-copy mt-4">
           A centralized administrative workspace provides quick access to event
           management, attendee workflows, communications, and reporting from a
           single application.
@@ -107,11 +107,11 @@
 
    <section class="space-y-8 border-b border-site-border/60 pb-16">
   <div class="max-w-3xl">
-    <h2 class="text-2xl font-bold tracking-tight text-site-text">
+    <h2 class="subsection-title">
       Feature Highlights
     </h2>
 
-    <p class="mt-4 text-lg leading-8 text-site-muted">
+    <p class="lead-copy mt-4">
       Designed for multiple administrative groups, the platform centralizes the
       full event lifecycle — from event setup and registration to attendee
       management, communications, and reporting — into one consistent
@@ -224,45 +224,45 @@
 <CaseStudySection title="Project Impact">
   <div class="grid gap-6 sm:grid-cols-2">
 
-    <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-      <h3 class="text-lg font-semibold text-site-text">
+    <div class="card-surface p-6">
+      <h3 class="card-title">
   Reduced Developer Maintenance
 </h3>
 
-<p class="mt-3 text-site-muted">
+<p class="body-copy mt-3">
   Routine event creation and management shifted from engineering to
   administrative users, reducing repetitive developer involvement.
 </p>
     </div>
 
-    <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-      <h3 class="text-lg font-semibold text-site-text">
+    <div class="card-surface p-6">
+      <h3 class="card-title">
         Empowered Non-Technical Users
       </h3>
 
-      <p class="mt-3 text-site-muted">
+      <p class="body-copy mt-3">
         Administrators can independently create, configure, and manage events
         without relying on developers for routine updates.
       </p>
     </div>
 
-    <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-      <h3 class="text-lg font-semibold text-site-text">
+    <div class="card-surface p-6">
+      <h3 class="card-title">
         Unified Event Management
       </h3>
 
-      <p class="mt-3 text-site-muted">
+      <p class="body-copy mt-3">
         Event setup, registration, attendee management, communications, and
         recurring scheduling are managed from one centralized application.
       </p>
     </div>
 
-    <div class="rounded-card border border-site-border bg-site-surface/70 p-6">
-      <h3 class="text-lg font-semibold text-site-text">
+    <div class="card-surface p-6">
+      <h3 class="card-title">
         Built for Future Growth
       </h3>
 
-      <p class="mt-3 text-site-muted">
+      <p class="body-copy mt-3">
         The modular architecture supports future enhancements and allows new event capabilities to be added without redesigning the platform.
       </p> 
     </div>

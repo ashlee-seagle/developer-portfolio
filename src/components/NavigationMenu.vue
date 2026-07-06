@@ -6,6 +6,7 @@
       :key="item.label"
       :to="item.to"
       class="transition hover:text-site-text"
+      :class="isActiveNavItem(item.to) ? 'text-brand' : 'text-site-muted'"
     >
       {{ item.label }}
     </RouterLink>
@@ -13,5 +14,12 @@
 </template>
 
 <script setup lang="ts">
-    import { navItems } from '../data/navigation'
+import { useRoute } from 'vue-router'
+import { navItems } from '../data/navigation'
+
+const route = useRoute()
+
+const isActiveNavItem = (to: { path: string; hash?: string }) => {
+  return route.path === to.path && route.hash === to.hash
+}
 </script>

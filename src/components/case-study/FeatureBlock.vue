@@ -5,7 +5,7 @@
           hover:border-brand/40
            hover:shadow-[0_12px_40px_rgba(139,92,246,0.10)]"
   >
-    <div class="grid gap-8 p-8 lg:grid-cols-[1.45fr_1fr] lg:items-start">
+    <div class="grid gap-10 p-8 sm:p-10 lg:grid-cols-[1.45fr_1fr] lg:items-start lg:p-12">
       <div>
         <slot name="media">
           <ScreenshotPlaceholder
@@ -16,7 +16,7 @@
 
           <p
             v-if="imageCaption"
-            class="mt-3 text-sm leading-6 text-site-muted"
+            class="caption-copy mt-4"
           >
             {{ imageCaption }}
           </p>
@@ -24,17 +24,17 @@
       </div>
 
       <div>
-        <h3 class="text-xl font-semibold text-site-text">
+        <h3 class="card-title">
           {{ title }}
         </h3>
 
-        <p class="mt-3 text-sm leading-6 text-site-muted">
+        <p class="caption-copy mt-6">
           {{ description }}
         </p>
 
         <ul
           v-if="highlights?.length"
-          class="mt-5 space-y-2 text-sm leading-6 text-site-muted"
+          class="caption-copy mt-8 space-y-4"
         >
           <li
             v-for="highlight in highlights"

@@ -43,7 +43,7 @@
 
         <p
           v-if="props.caption"
-          class="mt-3 max-w-4xl text-center text-sm leading-6 text-site-muted"
+          class="caption-copy mt-3 max-w-4xl text-center"
         >
           {{ props.caption }}
         </p>

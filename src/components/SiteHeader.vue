@@ -1,6 +1,6 @@
 <template>
     <header class="sticky top-0 z-50 border-b border-site-border/60 bg-site-bg/80 backdrop-blur-xl">
-        <nav  aria-label="Primary navigation" class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <nav  aria-label="Primary navigation" class="site-container flex items-center justify-between py-4">
           <a href="#" class="flex items-center gap-3 font-semibold">
             <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-brand text-white">
               A
@@ -31,15 +31,16 @@
         <div
             v-if="isMobileMenuOpen"
             id="mobile-navigation"
-            class="border-t border-site-border bg-site-bg px-4 py-4 md:hidden"
+            class="border-t border-site-border bg-site-bg md:hidden"
         >
-            <div class="flex flex-col gap-3 text-sm text-site-muted">
+            <div class="site-container flex flex-col gap-3 py-4 text-sm text-site-muted">
                 
                 <RouterLink
                 v-for="item in navItems"
                 :key="item.label"
                 :to="item.to"
-                class="hover:text-site-text transition"
+                class="transition hover:text-site-text"
+                :class="isActiveNavItem(item.to) ? 'text-brand' : 'text-site-muted'"
                 @click="closeMobileMenu"
                 >
                 {{ item.label }}
@@ -54,8 +55,10 @@
     import { navItems } from '../data/navigation'
     import NavigationMenu from './NavigationMenu.vue';
     import { ref } from 'vue';
+    import { useRoute } from 'vue-router'
 
     const isMobileMenuOpen = ref(false)
+    const route = useRoute()
 
     const toggleMobileMenu = () => {
     isMobileMenuOpen.value = !isMobileMenuOpen.value
@@ -63,5 +66,9 @@
 
     const closeMobileMenu = () => {
     isMobileMenuOpen.value = false
+    }
+
+    const isActiveNavItem = (to: { path: string; hash?: string }) => {
+    return route.path === to.path && route.hash === to.hash
     }
 </script>

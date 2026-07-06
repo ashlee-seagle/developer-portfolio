@@ -14,7 +14,7 @@
 
     <p
       v-if="activeImage.description"
-      class="text-sm leading-6 text-site-muted"
+      class="caption-copy"
     >
       {{ activeImage.description }}
     </p>
