@@ -7,17 +7,17 @@ export const navItems = [
     },
   },
   {
-    label: 'Skills',
-    to: {
-      path: '/',
-      hash: '#skills',
-    },
-  },
-  {
     label: 'About',
     to: {
       path: '/',
       hash: '#about',
+    },
+  },
+  {
+    label: 'Skills',
+    to: {
+      path: '/',
+      hash: '#skills',
     },
   },
   {
