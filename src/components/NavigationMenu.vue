@@ -14,12 +14,8 @@
 </template>
 
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
+import { useActiveNavItem } from '../composables/useActiveNavItem'
 import { navItems } from '../data/navigation'
 
-const route = useRoute()
-
-const isActiveNavItem = (to: { path: string; hash?: string }) => {
-  return route.path === to.path && route.hash === to.hash
-}
+const { isActiveNavItem } = useActiveNavItem()
 </script>

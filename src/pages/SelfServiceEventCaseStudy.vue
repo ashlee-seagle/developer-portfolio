@@ -125,6 +125,22 @@
   </template>
 </FeatureBlock>
 
+<FeatureBlock
+  title="Content Management & Public Event Pages"
+  description="Administrators can create and manage attendee-facing event pages without developer involvement using a modular content editor. Rich text, images, reusable content blocks, and custom page organization allow each event to provide a tailored attendee experience while maintaining a consistent site structure."
+  :highlights="[
+    'Visual page builder',
+    'Rich text editing',
+    'Image uploads',
+    'Custom event pages',
+    'Responsive public event site',
+  ]"
+>
+  <template #media>
+    <ScreenshotGallery :images="contentManagementImages" />
+  </template>
+</FeatureBlock>
+
    <FeatureBlock
   title="Attendee Import Wizard"
   description="Administrators can upload attendee spreadsheets, map columns to application fields, configure registration behavior, and review records before completing the import."
@@ -310,6 +326,10 @@ import eventCreationReviewImage from '../assets/images/projects/event-platform/e
 import recurrenceBuilderImage from '../assets/images/projects/event-platform/event-wizard-recurrence-builder.png'
 import registrationSettingsImage from '../assets/images/projects/event-platform/event-wizard-step3.png'
 
+import pageBuilderImage from '../assets/images/projects/page-builder.png'
+import publicEventLightImage from '../assets/images/projects/event-platform/public-view-page.png'
+import publicEventDarkImage from '../assets/images/projects/event-platform/public-view-page-dark.png'
+
 import attendeeImportUploadImage from '../assets/images/projects/event-platform/import-upload.png'
 import attendeeImportMappingImage from '../assets/images/projects/event-platform/import-mapping.png'
 import attendeeImportRegistrationImage from '../assets/images/projects/event-platform/import-registration.png'
@@ -348,6 +368,29 @@ const newEventWizardImages = [
 
   },
   
+]
+const contentManagementImages = [
+  {
+    src: pageBuilderImage,
+    alt: 'Page builder showing modular content editing for event pages.',
+    label: 'Page Builder',
+    description:
+      'Administrators can build and manage attendee-facing pages using a visual editor with reusable content blocks, rich text, images, and custom page organization.',
+  },
+  {
+    src: publicEventLightImage,
+    alt: 'Public-facing event page displayed in the light theme.',
+    label: 'Public Site',
+    description:
+      'Content created through the page builder is presented in a polished attendee-facing experience.',
+  },
+  {
+    src: publicEventDarkImage,
+    alt: 'Public-facing event page displayed in the dark theme.',
+    label: 'Dark Theme',
+    description:
+      'The same content can be presented using an alternate visual theme while maintaining a consistent page structure and navigation.',
+  },
 ]
 
 const attendeeImportImages = [

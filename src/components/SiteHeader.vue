@@ -55,13 +55,13 @@
 </template>
 
 <script setup lang="ts">
+    import { ref } from 'vue';
+    import { useActiveNavItem } from '../composables/useActiveNavItem'
     import { navItems } from '../data/navigation'
     import NavigationMenu from './NavigationMenu.vue';
-    import { ref } from 'vue';
-    import { useRoute } from 'vue-router'
 
     const isMobileMenuOpen = ref(false)
-    const route = useRoute()
+    const { isActiveNavItem } = useActiveNavItem()
 
     const toggleMobileMenu = () => {
     isMobileMenuOpen.value = !isMobileMenuOpen.value
@@ -71,7 +71,4 @@
     isMobileMenuOpen.value = false
     }
 
-    const isActiveNavItem = (to: { path: string; hash?: string }) => {
-    return route.path === to.path && route.hash === to.hash
-    }
 </script>
