@@ -5,11 +5,17 @@
       v-for="item in navItems"
       :key="item.label"
       :to="item.to"
-      class="transition hover:text-site-text"
-      :class="isActiveNavItem(item.to) ? 'text-brand' : 'text-site-muted'"
-      @click="scrollToCurrentHash(item.to)"
+      custom
+      v-slot="{ href }"
     >
-      {{ item.label }}
+      <a
+        :href="href"
+        class="transition hover:text-site-text"
+        :class="isActiveNavItem(item.to) ? 'text-brand' : 'text-site-muted'"
+        @click="navigateToSection(item.to, $event)"
+      >
+        {{ item.label }}
+      </a>
     </RouterLink>
   </div>
 </template>
@@ -18,5 +24,5 @@
 import { useActiveNavItem } from '../composables/useActiveNavItem'
 import { navItems } from '../data/navigation'
 
-const { isActiveNavItem, scrollToCurrentHash } = useActiveNavItem()
+const { isActiveNavItem, navigateToSection } = useActiveNavItem()
 </script>
