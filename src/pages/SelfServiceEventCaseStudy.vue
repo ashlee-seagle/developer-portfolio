@@ -141,22 +141,21 @@
   </template>
 </FeatureBlock>
 
-  <FeatureBlock
-  title="Attendee Management"
-  description="A centralized workspace supports attendee search, filtering, invitation tracking, registration management, imports, exports, reporting, and setup progress throughout the event lifecycle."
-  image-alt="Attendee management workspace showing attendee records, registration status, search and filtering tools, import options, and reporting."
-  image-caption="Administrators can manage registrations, invitations, attendee records, and reporting from one centralized workspace."
-  :highlights="[
-    'Invitation and registration tracking',
-    'Search and filter attendees',
-    'Excel import and export',
-    'Reporting and setup progress',
-  ]"
->
-  <template #media>
-    <ScreenshotGallery :images="attendeeManagementImages" />
-  </template>
-</FeatureBlock>
+ <FeatureBlock
+      title="Email Management"
+      description="Administrators can create, customize, preview, and manage reusable email templates for invitations, confirmations, reminders, and other event communications."
+      :image-src="emailManagement"
+      image-alt="Email management workspace showing reusable email templates, scheduling options, and communication tools."
+      image-caption="Reusable email templates simplify communication while keeping messaging consistent across events."
+      :highlights="[
+        'Reusable email templates',
+        'Invitation and reminder workflows',
+        'Template preview and editing',
+        'Consistent communication across events',
+      ]"
+    />
+
+ 
 <FeatureBlock
   title="Attendee Import Wizard"
   description="Administrators can upload attendee spreadsheets, map columns to application fields, configure registration behavior, and review records before completing the import."
@@ -172,19 +171,36 @@
   </template>
 </FeatureBlock>
 
-    <FeatureBlock
-      title="Email Management"
-      description="Administrators can create, customize, preview, and manage reusable email templates for invitations, confirmations, reminders, and other event communications."
-      :image-src="emailManagement"
-      image-alt="Email management workspace showing reusable email templates, scheduling options, and communication tools."
-      image-caption="Reusable email templates simplify communication while keeping messaging consistent across events."
-      :highlights="[
-        'Reusable email templates',
-        'Invitation and reminder workflows',
-        'Template preview and editing',
-        'Consistent communication across events',
-      ]"
-    />
+<FeatureBlock
+  title="Attendee Registration Experience"
+  description="Each invitation includes a unique, attendee-specific registration link generated from the email template. The attendee registration experience pre-filled participant information, supported recurring event attendance, and simplified registration with quick actions and reusable responses."
+  :image-src="personalizedRegistration"
+  image-alt="Personalized attendee registration form showing pre-filled attendee information, recurring event dates, attendance options, lunch request fields, copy from previous actions, and submit button."
+  image-caption="Attendees can register through a personalized link, update their information, RSVP for individual recurring dates, and reuse responses across occurrences."
+  :highlights="[
+    'Secure personalized registration links',
+    'Pre-filled attendee information',
+    'RSVP for individual event dates',
+    'Copy previous responses across occurrences',
+  ]"
+/>
+
+   <FeatureBlock
+  title="Attendee Management"
+  description="A centralized workspace supports attendee search, filtering, invitation tracking, registration management, imports, exports, reporting, and setup progress throughout the event lifecycle."
+  image-alt="Attendee management workspace showing attendee records, registration status, search and filtering tools, import options, and reporting."
+  image-caption="Administrators can manage registrations, invitations, attendee records, and reporting from one centralized workspace."
+  :highlights="[
+    'Invitation and registration tracking',
+    'Search and filter attendees',
+    'Excel import and export',
+    'Reporting and setup progress',
+  ]"
+>
+  <template #media>
+    <ScreenshotGallery :images="attendeeManagementImages" />
+  </template>
+</FeatureBlock>
 
     <FeatureBlock
       title="Group Dashboard"
@@ -339,6 +355,7 @@ import attendeeImportMappingImage from '../assets/images/projects/event-platform
 import attendeeImportRegistrationImage from '../assets/images/projects/event-platform/import-registration.png'
 import attendeeImportReviewImage from '../assets/images/projects/event-platform/import-review.png'
 
+import personalizedRegistration from '../assets/images/projects/event-platform/personalized-registration.png'
 
 const technologies = ['Laravel', 'Vue 3', 'Quasar', 'SQL Server', 'REST APIs']
 
