@@ -1,5 +1,6 @@
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
+import { skipNextRouterHashScroll } from '../router'
 
 export type NavTarget = {
   path: string
@@ -7,9 +8,45 @@ export type NavTarget = {
 }
 
 const sectionOffset = 120
+const navigationScrollLockMs = 700
+
+let scrollUnlockTimer: number | undefined
+let releaseScrollLock: (() => void) | undefined
+
+const preventScroll = (event: Event) => {
+  event.preventDefault()
+}
+
+const lockWheelMomentum = () => {
+  releaseScrollLock?.()
+
+  window.addEventListener('wheel', preventScroll, { capture: true, passive: false })
+  window.addEventListener('touchmove', preventScroll, { capture: true, passive: false })
+
+  releaseScrollLock = () => {
+    if (scrollUnlockTimer) {
+      window.clearTimeout(scrollUnlockTimer)
+      scrollUnlockTimer = undefined
+    }
+
+    window.removeEventListener('wheel', preventScroll, { capture: true })
+    window.removeEventListener('touchmove', preventScroll, { capture: true })
+    releaseScrollLock = undefined
+  }
+
+  scrollUnlockTimer = window.setTimeout(() => {
+    releaseScrollLock?.()
+    scrollUnlockTimer = undefined
+  }, navigationScrollLockMs)
+}
+
+const waitForFrame = () => new Promise<void>((resolve) => {
+  window.requestAnimationFrame(() => resolve())
+})
 
 export const useActiveNavItem = () => {
   const route = useRoute()
+  const router = useRouter()
   const activeHash = ref(route.hash)
 
   const isHomePage = computed(() => route.path === '/')
@@ -76,18 +113,51 @@ export const useActiveNavItem = () => {
     return isHomePage.value && route.path === to.path && activeHash.value === to.hash
   }
 
-  const scrollToCurrentHash = (to: NavTarget) => {
-    if (!to.hash || route.path !== to.path || route.hash !== to.hash) {
+  const navigateToSection = async (to: NavTarget, event?: MouseEvent) => {
+    if (event && (
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.altKey ||
+      event.ctrlKey ||
+      event.shiftKey
+    )) {
       return
     }
 
-    document.querySelector(to.hash)?.scrollIntoView({
+    if (!to.hash) {
+      return
+    }
+
+    event?.preventDefault()
+    lockWheelMomentum()
+
+    const isSameRoute = route.path === to.path && route.hash === to.hash
+
+    if (!isSameRoute) {
+      skipNextRouterHashScroll()
+      await router.push(to)
+      await nextTick()
+      await waitForFrame()
+    }
+
+    const target = document.querySelector<HTMLElement>(to.hash)
+
+    if (!target) {
+      return
+    }
+
+    const scrollMarginTop = Number.parseFloat(window.getComputedStyle(target).scrollMarginTop) || 0
+    const top = target.getBoundingClientRect().top + window.scrollY - scrollMarginTop
+
+    window.scrollTo({
+      top,
       behavior: 'smooth',
     })
   }
 
   return {
     isActiveNavItem,
-    scrollToCurrentHash,
+    navigateToSection,
   }
 }

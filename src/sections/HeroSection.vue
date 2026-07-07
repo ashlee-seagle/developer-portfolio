@@ -17,9 +17,16 @@
       <div class="mt-10 flex flex-col gap-3 sm:flex-row">
         <RouterLink
           :to="{ path: '/', hash: '#projects' }"
-          class="button-primary hover:bg-brand-hover active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-site-bg"
+          custom
+          v-slot="{ href }"
         >
-          View My Work
+          <a
+            :href="href"
+            class="button-primary hover:bg-brand-hover active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-site-bg"
+            @click="navigateToSection({ path: '/', hash: '#projects' }, $event)"
+          >
+            View My Work
+          </a>
         </RouterLink>
 
 
@@ -52,3 +59,9 @@
     
   </section>
 </template>
+
+<script setup lang="ts">
+import { useActiveNavItem } from '../composables/useActiveNavItem'
+
+const { navigateToSection } = useActiveNavItem()
+</script>

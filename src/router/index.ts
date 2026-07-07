@@ -4,10 +4,21 @@ import SelfServiceEventCaseStudy from '../pages/SelfServiceEventCaseStudy.vue'
 import NotFoundPage from '../pages/NotFoundPage.vue'
 import ReusableFrontendPlatformCaseStudy from '../pages/ReusableFrontendPlatformCaseStudy.vue'
 
+let skipNextHashScroll = false
+
+export const skipNextRouterHashScroll = () => {
+  skipNextHashScroll = true
+}
+
 export const router = createRouter({
   history: createWebHistory(),
   scrollBehavior(to) {
     if (to.hash) {
+      if (skipNextHashScroll) {
+        skipNextHashScroll = false
+        return false
+      }
+
       return {
         el: to.hash,
         behavior: 'smooth',

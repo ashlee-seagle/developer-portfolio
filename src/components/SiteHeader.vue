@@ -15,9 +15,16 @@
 
           <RouterLink
             :to="{ path: '/', hash: '#contact' }"
-            class="hidden rounded-lg bg-brand px-5 py-2.5 text-sm font-medium text-white shadow-glow transition hover:bg-brand-hover md:inline-flex"
+            custom
+            v-slot="{ href }"
           >
-            Let’s Connect
+            <a
+              :href="href"
+              class="hidden rounded-lg bg-brand px-5 py-2.5 text-sm font-medium text-white shadow-glow transition hover:bg-brand-hover md:inline-flex"
+              @click="navigateToSection({ path: '/', hash: '#contact' }, $event)"
+            >
+              Let’s Connect
+            </a>
           </RouterLink>
 
           <button
@@ -42,11 +49,17 @@
                 v-for="item in navItems"
                 :key="item.label"
                 :to="item.to"
+                custom
+                v-slot="{ href }"
+                >
+                <a
+                :href="href"
                 class="transition hover:text-site-text"
                 :class="isActiveNavItem(item.to) ? 'text-brand' : 'text-site-muted'"
-                @click="handleMobileNavClick(item.to)"
+                @click="handleMobileNavClick(item.to, $event)"
                 >
-                {{ item.label }}
+                  {{ item.label }}
+                </a>
                 </RouterLink>
             </div>
         </div>
@@ -61,7 +74,7 @@
     import NavigationMenu from './NavigationMenu.vue';
 
     const isMobileMenuOpen = ref(false)
-    const { isActiveNavItem, scrollToCurrentHash } = useActiveNavItem()
+    const { isActiveNavItem, navigateToSection } = useActiveNavItem()
 
     const toggleMobileMenu = () => {
     isMobileMenuOpen.value = !isMobileMenuOpen.value
@@ -71,8 +84,8 @@
     isMobileMenuOpen.value = false
     }
 
-    const handleMobileNavClick = (to: NavTarget) => {
-    scrollToCurrentHash(to)
+    const handleMobileNavClick = (to: NavTarget, event: MouseEvent) => {
+    navigateToSection(to, event)
     closeMobileMenu()
     }
 
