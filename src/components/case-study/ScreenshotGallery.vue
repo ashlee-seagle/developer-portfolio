@@ -2,14 +2,16 @@
   <div v-if="activeImage" class="space-y-4">
     <button
       type="button"
-      class="group block w-full cursor-zoom-in overflow-hidden border border-site-border bg-site-bg text-left"
+      class="group block w-full cursor-zoom-in overflow-hidden r bg-site-surface text-left"
       @click="isLightboxOpen = true"
     >
+    <div class="flex h-[280px] items-center justify-center bg-site-surface sm:h-[380px] lg:h-[440px]">
       <img
         :src="activeImage.src"
         :alt="activeImage.alt"
         class="w-full"
       />
+  </div>
     </button>
 
     <p
