@@ -141,7 +141,23 @@
   </template>
 </FeatureBlock>
 
-   <FeatureBlock
+  <FeatureBlock
+  title="Attendee Management"
+  description="A centralized workspace supports attendee search, filtering, invitation tracking, registration management, imports, exports, reporting, and setup progress throughout the event lifecycle."
+  image-alt="Attendee management workspace showing attendee records, registration status, search and filtering tools, import options, and reporting."
+  image-caption="Administrators can manage registrations, invitations, attendee records, and reporting from one centralized workspace."
+  :highlights="[
+    'Invitation and registration tracking',
+    'Search and filter attendees',
+    'Excel import and export',
+    'Reporting and setup progress',
+  ]"
+>
+  <template #media>
+    <ScreenshotGallery :images="attendeeManagementImages" />
+  </template>
+</FeatureBlock>
+<FeatureBlock
   title="Attendee Import Wizard"
   description="Administrators can upload attendee spreadsheets, map columns to application fields, configure registration behavior, and review records before completing the import."
   :highlights="[
@@ -155,20 +171,6 @@
     <ScreenshotGallery :images="attendeeImportImages" />
   </template>
 </FeatureBlock>
-
-    <FeatureBlock
-      title="Attendee Management"
-      description="A centralized workspace supports attendee search, filtering, invitation tracking, registration management, imports, exports, reporting, and setup progress throughout the event lifecycle."
-      :image-src="attendeeManagement"
-      image-alt="Attendee management workspace showing attendee records, registration status, search and filtering tools, import options, and reporting."
-      image-caption="Administrators can manage registrations, invitations, attendee records, and reporting from one centralized workspace."
-      :highlights="[
-        'Invitation and registration tracking',
-        'Search and filter attendees',
-        'Excel import and export',
-        'Reporting and setup progress',
-      ]"
-    />
 
     <FeatureBlock
       title="Email Management"
@@ -317,7 +319,6 @@ import ScreenshotGallery from '../components/case-study/ScreenshotGallery.vue'
 import eventOverviewImage from '../assets/images/projects/event-platform/event-overview.png'
 import eventOverviewExpandedImage from '../assets/images/projects/event-platform/event-overview-checklist.png'
 import eventsListImage from '../assets/images/projects/event-platform/events-list.png'
-import attendeeManagement from '../assets/images/projects/event-platform/manage-attendees.png'
 import emailManagement from '../assets/images/projects/event-platform/manage-emails.png'
 import dashboardImage from '../assets/images/projects/event-platform/dashboard.png'
 
@@ -326,7 +327,10 @@ import eventCreationReviewImage from '../assets/images/projects/event-platform/e
 import recurrenceBuilderImage from '../assets/images/projects/event-platform/event-wizard-recurrence-builder.png'
 import registrationSettingsImage from '../assets/images/projects/event-platform/event-wizard-step3.png'
 
-import pageBuilderImage from '../assets/images/projects/page-builder.png'
+import attendeeManagement from '../assets/images/projects/event-platform/manage-attendees.png' 
+import attendeeDetailsImage from '../assets/images/projects/event-platform/attendee-details.png'
+
+import pageBuilderImage from '../assets/images/projects/event-platform/page-builder.png'
 import publicEventLightImage from '../assets/images/projects/event-platform/public-view-page.png'
 import publicEventDarkImage from '../assets/images/projects/event-platform/public-view-page-dark.png'
 
@@ -368,6 +372,22 @@ const newEventWizardImages = [
 
   },
   
+]
+const attendeeManagementImages = [
+  {
+    src: attendeeManagement,
+    alt: 'Attendee management dashboard showing attendee records, registration status, search, filtering, reporting, and import actions.',
+    label: 'Attendee Workspace',
+    description:
+      'Administrators can search attendees, filter by registration status, manually add attendees, import from Excel, and export reports from a centralized workspace.',
+  },
+  {
+    src: attendeeDetailsImage,
+    alt: 'Attendee detail view showing attendee information and invitation management across recurring event occurrences.',
+    label: 'Attendee Details',
+    description:
+      'Individual attendee records provide contact information, custom fields, and invitation management for each occurrence of a recurring event.',
+  },
 ]
 const contentManagementImages = [
   {
