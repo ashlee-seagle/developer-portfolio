@@ -13,12 +13,12 @@
 
           <NavigationMenu />
 
-          <a
-            href="#contact"
+          <RouterLink
+            :to="{ path: '/', hash: '#contact' }"
             class="hidden rounded-lg bg-brand px-5 py-2.5 text-sm font-medium text-white shadow-glow transition hover:bg-brand-hover md:inline-flex"
           >
             Let’s Connect
-          </a>
+          </RouterLink>
 
           <button
                 type="button"
@@ -44,7 +44,7 @@
                 :to="item.to"
                 class="transition hover:text-site-text"
                 :class="isActiveNavItem(item.to) ? 'text-brand' : 'text-site-muted'"
-                @click="closeMobileMenu"
+                @click="handleMobileNavClick(item.to)"
                 >
                 {{ item.label }}
                 </RouterLink>
@@ -56,12 +56,12 @@
 
 <script setup lang="ts">
     import { ref } from 'vue';
-    import { useActiveNavItem } from '../composables/useActiveNavItem'
+    import { useActiveNavItem, type NavTarget } from '../composables/useActiveNavItem'
     import { navItems } from '../data/navigation'
     import NavigationMenu from './NavigationMenu.vue';
 
     const isMobileMenuOpen = ref(false)
-    const { isActiveNavItem } = useActiveNavItem()
+    const { isActiveNavItem, scrollToCurrentHash } = useActiveNavItem()
 
     const toggleMobileMenu = () => {
     isMobileMenuOpen.value = !isMobileMenuOpen.value
@@ -69,6 +69,11 @@
 
     const closeMobileMenu = () => {
     isMobileMenuOpen.value = false
+    }
+
+    const handleMobileNavClick = (to: NavTarget) => {
+    scrollToCurrentHash(to)
+    closeMobileMenu()
     }
 
 </script>

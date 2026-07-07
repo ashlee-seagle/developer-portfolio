@@ -15,12 +15,12 @@
       </p>
 
       <div class="mt-10 flex flex-col gap-3 sm:flex-row">
-        <a
-          href="#projects"
+        <RouterLink
+          :to="{ path: '/', hash: '#projects' }"
           class="button-primary hover:bg-brand-hover active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-site-bg"
         >
           View My Work
-        </a>
+        </RouterLink>
 
 
       </div> 

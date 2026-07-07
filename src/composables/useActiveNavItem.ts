@@ -1,7 +1,7 @@
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
-type NavTarget = {
+export type NavTarget = {
   path: string
   hash?: string
 }
@@ -76,7 +76,18 @@ export const useActiveNavItem = () => {
     return isHomePage.value && route.path === to.path && activeHash.value === to.hash
   }
 
+  const scrollToCurrentHash = (to: NavTarget) => {
+    if (!to.hash || route.path !== to.path || route.hash !== to.hash) {
+      return
+    }
+
+    document.querySelector(to.hash)?.scrollIntoView({
+      behavior: 'smooth',
+    })
+  }
+
   return {
     isActiveNavItem,
+    scrollToCurrentHash,
   }
 }

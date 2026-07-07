@@ -7,6 +7,7 @@
       :to="item.to"
       class="transition hover:text-site-text"
       :class="isActiveNavItem(item.to) ? 'text-brand' : 'text-site-muted'"
+      @click="scrollToCurrentHash(item.to)"
     >
       {{ item.label }}
     </RouterLink>
@@ -17,5 +18,5 @@
 import { useActiveNavItem } from '../composables/useActiveNavItem'
 import { navItems } from '../data/navigation'
 
-const { isActiveNavItem } = useActiveNavItem()
+const { isActiveNavItem, scrollToCurrentHash } = useActiveNavItem()
 </script>
