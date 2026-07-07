@@ -51,7 +51,15 @@
         >
           View Case Study →
         </RouterLink>
-
+         <a
+          v-if="project.liveDemoUrl"
+          :href="project.liveDemoUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-brand transition-colors hover:text-brand text-md"
+        >
+          Live Demo →
+        </a>
         <a 
           v-if="project.githubUrl"
           :href="project.githubUrl"
@@ -62,15 +70,6 @@
           GitHub →
         </a>
 
-        <a
-          v-if="project.liveDemoUrl"
-          :href="project.liveDemoUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-site-text transition-colors hover:text-brand text-md"
-        >
-          Live Demo →
-        </a>
       </div>
     </div>
   </article>

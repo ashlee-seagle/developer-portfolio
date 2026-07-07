@@ -46,6 +46,7 @@
   import ProjectCard from '../components/projects/ProjectCard.vue';
   import eventOverviewImage from '../assets/images/projects/event-platform/event-overview.png'
   import blankStarterShellImage from '../assets/images/projects/reusable-frontend-platform/blank-starter-shell.png'
+  import workoutAppImage from '../assets/images/projects/workout-app.png'
 
   type ProjectFilterType = 'all' | 'professional' | 'personal';
   
@@ -71,12 +72,15 @@
   image: blankStarterShellImage,
   },
   {
-    title: 'Plan My Workout',
-    type: 'personal',
-    description: 'A React application that generates personalized workout plans using AI based on user goals and available equipment.',
-    technologies: ['React', 'TypeScript', 'Tailwind'],
-    githubUrl: 'https://github.com/ashlee-seagle/workout-planner',
-  },
+  title: 'Workout Planner',
+  type: 'personal',
+  description:
+    'An AI-powered workout planner built with React that generates personalized strength training routines based on fitness goals and available equipment. Features responsive design, light and dark mode, and polished loading and error states.',
+  technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Gemini API'],
+  githubUrl: 'https://github.com/ashlee-seagle/workout-planner',
+  liveDemoUrl: 'https://workout-planner-six-lilac.vercel.app/',
+  image: workoutAppImage,
+},
 ]
 const getFilterButtonClasses = (type: ProjectFilterType) => {
   const baseClasses =
