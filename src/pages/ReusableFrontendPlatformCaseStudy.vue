@@ -36,16 +36,28 @@
   </p>
 
   <p class="body-copy mt-3">
-    This reusable frontend platform was developed alongside the
-    Self-Service Event Management Platform and served as the foundation
-    for that application. Shared layouts, navigation, theming, reusable
-    components, and architectural patterns were immediately adopted in
-    production, validating the approach while accelerating future
-    development.
+    This reusable frontend platform became the foundation for the
+    Self-Service Event Management Platform. Its shared layouts,
+    navigation, theming, reusable components, and architectural
+    patterns were adopted in production, validating the platform
+    while accelerating future application development.
   </p>
 </div>
+<CaseStudySection title="Production Platform Showcase" title-align="start">
+  <p>
+    The following production screens demonstrate how the reusable platform
+    was applied in a real application. Shared layouts, configurable themes,
+    navigation, reusable tables, and interface patterns provided a consistent
+    foundation while allowing workflows to be tailored to the needs of the
+    Event Management Platform.
+  </p>
 
-    <CaseStudySection title="My Role" title-align="start">
+  <div class="mt-8">
+    <ScreenshotGallery :images="productionThemeImages" />
+  </div>
+</CaseStudySection>
+
+    <CaseStudySection title="My Role">
       <p>
           I identified recurring setup inefficiencies across internal development and proposed a reusable front-end platform to standardize new applications. I designed the architecture, built the shared application foundation, documented implementation patterns, and enabled adoption across future projects.
         </p>
@@ -256,6 +268,15 @@ import FeatureBlock from '../components/case-study/FeatureBlock.vue'
 import ScreenshotGallery from '../components/case-study/ScreenshotGallery.vue'
 
 
+import productionDashboardDark from '../assets/images/projects/reusable-frontend-platform/production-dashboard-dark.png'
+import productionEventsListDark from '../assets/images/projects/reusable-frontend-platform/production-events-list-dark.png'
+import productionEventOverviewDark from '../assets/images/projects/reusable-frontend-platform/production-event-overview-dark.png'
+import productionEventOverviewLight from '../assets/images/projects/event-platform/event-overview.png'
+import productionEventsListLight from '../assets/images/projects/event-platform/events-list.png'
+import productionDashboard from '../assets/images/projects/event-platform/dashboard.png'
+import productionAttendees from '../assets/images/projects/event-platform/manage-attendees.png'
+import productionAttendeesDark from '../assets/images/projects/reusable-frontend-platform/production-attendees-dark.png'
+
 
 import blankStarterShell from '../assets/images/projects/reusable-frontend-platform/blank-starter-shell.png'
 import blankStarterShellDark from '../assets/images/projects/reusable-frontend-platform/blank-starter-shell-dark.png'
@@ -270,6 +291,7 @@ import mobileNavigationShell from '../assets/images/projects/reusable-frontend-p
 import componentGridViewImage from '../assets/images/projects/reusable-frontend-platform/grid-table-view.png'
 import componentFormImage from '../assets/images/projects/reusable-frontend-platform/form-component.png'
 import componentTableImage from '../assets/images/projects/reusable-frontend-platform/table-view.png'
+
 
 import developerDocsImage from '../assets/images/projects/reusable-frontend-platform/uikit-guide.png'
 
@@ -360,6 +382,67 @@ const componentLibraryImages = [
     description:
       'Form patterns standardize common field layouts, actions, and validation states across applications.',
   },
+]
+
+const productionThemeImages = [
+  {
+    src: productionDashboard,
+    alt: 'Production event platform dashboard showing sidebar navigation, event metrics, search, filters, sorting, and a default reusable data table.',
+    label: 'Dashboard Table',
+    description:
+      'The dashboard used the platform’s default table pattern with built-in search, filtering, sorting, pagination, status badges, and row actions.',
+  },
+  {
+    src: productionDashboardDark,
+    alt: 'Production event platform dashboard in dark mode.',
+    label: 'Dashboard Table (Dark)',
+    description:
+      'The dashboard used the platform’s default table pattern with built-in search, filtering, sorting, pagination, status badges, and row actions.',
+  },
+  
+  {
+    src: productionEventsListLight,
+    alt: 'Production event list page showing sidebar navigation, search, filters, sorting, and events displayed in a custom grid view.',
+    label: 'Events List',
+    description:
+      'The events list used the same reusable table foundation, but rendered records as a custom stylized grid view for a more visual browsing experience.',
+  },
+  {
+    src: productionEventsListDark,
+    alt: 'Production event list page in dark mode.',
+    label: 'Events List (Dark)',
+    description:
+      'The events list used the same reusable table foundation, but rendered records as a custom stylized grid view for a more visual browsing experience.',
+  },
+  {
+    src: productionEventOverviewLight,
+    alt: 'Production event overview page showing event details, recurring event dates, setup progress, status cards, and sidebar navigation.',
+    label: 'Event Overview',
+    description:
+      'Shared layout and card patterns supported event-specific workflows such as recurring dates, setup progress, status summaries, and contextual actions.',
+  },
+  {
+    src: productionEventOverviewDark,
+    alt: 'Production event overview page in dark mode.',
+    label: 'Event Overview (Dark)',
+    description:
+      'Shared layout and card patterns supported event-specific workflows such as recurring dates, setup progress, status summaries, and contextual actions.',
+  },
+   {
+    src: productionAttendees,
+    alt: 'Production attendee management page showing attendee search, filters, import and export actions, sortable table data, and pagination.',
+    label: 'Attendee Management',
+    description:
+      'Reusable table patterns supported attendee search, filtering, sorting, pagination, status indicators, row actions, imports, exports, and reporting workflows.',
+  },
+  {
+    src: productionAttendeesDark,
+    alt: 'Production attendee management page in dark mode.',
+    label: 'Attendee Management (Dark)',
+    description:
+      'Reusable table patterns supported attendee search, filtering, sorting, pagination, status indicators, row actions, imports, exports, and reporting workflows.',
+  },
+  
 ]
 
 </script> 
