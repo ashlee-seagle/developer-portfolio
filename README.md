@@ -2,7 +2,7 @@
 
 A modern developer portfolio built with Vue 3, TypeScript, and Tailwind CSS showcasing professional software engineering work, reusable frontend architecture, and personal projects.
 
-🌐 **Live Site:** https://developer-portfolio-brown-gamma.vercel.app/
+🌐 **Live Site:** https://ashlee-seagle.vercel.app/
 
 ---
 
